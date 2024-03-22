@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="ASSETS/CSS/orderStyles.css">
+</head>
+<body>
+
+    <!-- nav -->
+    <nav>
+        <div class="logo">
+            <a href="#home"><img src="ASSETS/IMAGES/logo.png" alt="Logo"></a>
+        </div>
+        <ul>
+            <li><a href="#registrationForm">Registration Form</a></li>
+            <li><a href="#orderForm">Order Form</a></li>
+            <li><a href="#home">Home</a></li>
+        </ul>
+    </nav>
+
+    
+    <div class="bg">
+        <!-- title -->
+        <div class="title">
+            <h1>Meemeow's GitCafe</h1>
+        </div>
+
+
+        <!-- menu -->
+        <div class="menu">
+            <div class="menuTitle">
+                <h1>Menu</h1>
+            </div>
+            <div class="fourbyfourMenu">
+                <div class="box">
+                    <div class="overlay">
+                        <h1 class="price">$4.25</h1>
+                    </div>
+                    <img src="ASSETS/IMAGES/item1.png" alt="Image 1">
+                    <button class="menuButton" id="firstMenu" data-price="$4.25">Latte</button>
+                </div>
+                <div class="box">
+                    <div class="overlay">
+                        <h1 class="price">$3.50</h1>
+                    </div>
+                    <img src="ASSETS/IMAGES/item2.png" alt="Image 2">
+                    <button class="menuButton" id="secondMenu" data-price="$3.50">Espresso</button>
+                </div>
+                <div class="box">
+                    <div class="overlay">
+                        <h1 class="price">$4.15</h1>
+                    </div>
+                    <img src="ASSETS/IMAGES/item3.png" alt="Image 3">
+                    <button class="menuButton" id="thirdMenu" data-price="$4.00">Frappe</button>
+                </div>
+                <div class="box">
+                    <div class="overlay">
+                        <h1 class="price">$3.75</h1>
+                    </div>
+                    <img src="ASSETS/IMAGES/item4.png" alt="Image 4">
+                    <button class="menuButton" id="fourthMenu" data-price="$3.00">Iced Coffee</button> 
+                </div>
+            </div>
+        </div>
+
+
+        <!-- order -->
+        <div class="orderForm">
+            <div class="orderTitle">
+                <h1>Order Form</h1>
+            </div>
+            <div class="itemQuantity">
+                <div class="box1">
+                    <h1>Latte</h1>
+                </div>
+                <div class="box2">
+                    <h1>Espresso</h1>
+                </div>
+                <div class="box3">
+                    <h1>Frappe</h1>
+                </div>
+                <div class="box4">
+                    <h1>Iced Coffee</h1>
+                </div>
+                <div class="quantity">
+                    <div class="addbutton">
+                        <button class="add" id="add1">+</button>
+                        <button class="add" id="add2">+</button>
+                        <button class="add" id="add3">+</button>
+                        <button class="add" id="add4">+</button>
+                    </div>
+                    <div class="minusbutton">
+                        <button class="minus" id="minus1">-</button>
+                        <button class="minus" id="minus2">-</button>
+                        <button class="minus" id="minus3">-</button>
+                        <button class="minus" id="minus4">-</button>
+                    </div>
+                </div>
+            </div>
+            <div class="titles">
+                <h1>Qty. Price Biocup?</h1>
+            </div>
+            <div class="quantityBoxes">
+                <div class="quantityBox" id="quantity1">0</div>
+                <div class="quantityBox" id="quantity2">0</div>
+                <div class="quantityBox" id="quantity3">0</div>
+                <div class="quantityBox" id="quantity4">0</div>
+            </div>
+            <div class="priceBoxes">
+                <div class="priceBox" id="price1">$0.00</div>
+                <div class="priceBox" id="price2">$0.00</div>
+                <div class="priceBox" id="price3">$0.00</div>
+                <div class="priceBox" id="price4">$0.00</div>
+            </div>
+            <div class="biocup">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="total">
+                <div class="bill">
+                    <h1>Cash:</h1>
+                    <input type="text" class="billInput" placeholder="Enter ($)" id="cashInput" disabled required>
+                </div>
+                <div class="totalP">
+                    <h1>Total:</h1>
+                    <div class="totalPrice">$0.00</div>
+                </div>
+            </div>
+            <div class="totalqty">0</div>
+        </div>
+
+
+        <!-- info -->
+        <div class="customerInfo">
+            <div class="infoTitle">
+                <h1>Customers' Information</h1>
+            </div>
+            <div class="name">
+                <h1>Name:</h1>
+                <input type="text" class="infoInput" placeholder="Enter Name" required>
+            </div>
+            <div class="address">
+                <h1>Address:</h1>
+                <input type="text" class="infoInput" placeholder="Enter Address" required>
+            </div>
+            <div class="phone">
+                <h1>Phone:</h1>
+                <input type="text" class="infoInput" id="phoneInput" placeholder="Enter Phone Number" required>
+            </div>
+        </div>
+
+        <!-- info -->
+        <div class="orderSummary">
+            <div class="totalSum">
+                <h1>Total:</h1>
+                <div class="totalPrice">$0.00</div>
+            </div>
+            <div class="totalCash">
+                <h1>Cash:</h1>
+                <div class="cash">$0.00</div>
+            </div>
+            <div class="divider">
+                <h2>--------------------------------------</h2>
+            </div>
+            <div class="totalChange">
+                <h1>Change:</h1>
+                <div class="change">$0.00</div>
+            </div>
+            <button id="placeOrder" disabled>Place Order!</button>
+        </div>
+
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="hotline">
+            <h1>Delivery Hotline</h1>
+            <p>1-800-123-4567</p>
+        </div> 
+        <div class="footerContent">
+            <p>© 2024 Meemeow's GitCafe</p>
+            <p>This site is created for educational purpose only!!</p>
+        </div>
+        <div class="terms">
+            <h1>Terms and Conditions</h1>
+            <p>Privacy Policy</p>
+            <p>Terms of Use</p>
+            <p>Refund Policy</p>
+        </div>
+    </div>
+
+    <script src="ASSETS/JS/orderScript.js"></script>
+</body>
+</html>
