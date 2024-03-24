@@ -260,7 +260,7 @@ nav li a.active {
     width: 51%;
     height: 50%;
     border-radius: 13px;
-    background-color: rgb(236, 255, 245);
+    background-color: #ecfff5;
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -437,6 +437,11 @@ nav li a.active {
     top: 75%;
 }
 
+.add:active{
+    background-color: #193819; 
+    color: white;
+    transform: scale(0.96);
+}
 
 .minus{
     position: absolute;
@@ -477,6 +482,12 @@ nav li a.active {
 }
 #minus4 {
     top: 75%;
+}
+
+.minus:active{
+    background-color: #193819; 
+    color: white;
+    transform: scale(0.96);
 }
 
 .titles {
@@ -736,6 +747,7 @@ input:checked + .slider:before {
 }
 
 
+
 .customerInfo {
     position: relative;
     top: -66.5%;
@@ -944,6 +956,12 @@ input[type="text"]:focus {
     transform: scale(1.06);
 }
 
+#placeOrder:active{
+    background-color: #193819; 
+    color: white;
+    transform: scale(0.96);
+}
+
 #placeOrder:disabled {
     background-color: #cfcfcf;
     cursor: not-allowed;
@@ -1047,22 +1065,6 @@ input:disabled {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .footer {
     width: 100%;
     height: 24vh !important;
@@ -1148,6 +1150,5 @@ input:disabled {
     text-decoration: underline;
     transition: 0.3s ease;
 }
-
 
 
