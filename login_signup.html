@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="ASSETS/CSS/login_signupStyles.css">
+</head>
+<body>
+
+    <!-- nav -->
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="ASSETS/IMAGES/logo.png" alt="Logo"></a>
+        </div>
+        <ul>
+            <li><a href="login_signup.html">Login / Signup</a></li>
+            <li><a href="contact_tip.html">Contact Us</a></li>
+            <li><a href="trackmyorder.html">Track your Order</a></li>   
+            <li><a href="order.html">Order</a></li>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+
+    
+    <div class="bg">
+        <div class="container">
+            <div class="button-container">
+                <button id="login-button" class="login-button">LogIn</button>
+                <button id="signup-button" class="signup-button">SignUp</button>
+            </div>
+             <div class="login-form" id="login-form">
+                <form action="index.html" method="post">
+                    <input type="text" name="username" placeholder="Enter email or username" required>
+                    <input type="password" name="password" placeholder="Enter password" required>
+                    <button class="loginSubmit" type="submit">Login</button>
+                </form>
+                <a href="#">
+                    <p>Forgotten Account?</p>
+                </a>
+                <div class="signin-link">
+                    <a href="https://www.google.com">
+                        <button class="btn">
+                            <img src="https://cdn.iconscout.com/icon/free/png-256/free-google-1772223-1507807.png" alt="Google Icon">
+                            Sign In With Google
+                        </button>
+                    </a>
+                    <a href="https://www.yahoo.com">
+                        <button class="btn">
+                            <img src="https://cdn1.iconfinder.com/data/icons/smallicons-logotypes/32/yahoo-512.png" alt="Linkedin Icon">
+                            Sign In With Yahoo!
+                        </button>
+                    </a>
+                    <a href="https://www.microsoft.com">
+                        <button class="btn">
+                            <img src="https://www.microsoft.com/en-us/microsoft-365/blog/wp-content/uploads/sites/2/2022/06/cropped-microsoft_logo_element.png" alt="Microsoft Icon">
+                            Sign In With Microsoft
+                        </button>
+                    </a>
+                </div>
+            </div> 
+            <div class="signup-form" id="signup-form">
+                <div class="signupBanner">
+                    <h2>Please fill in this form to create an account!</h2>
+                </div>
+                <form id="signup-form" action="index.html">
+                    <input id="first-name" type="text" name="firstName" placeholder="First Name" required>
+                    <input id="last-name" type="text" name="lastName" placeholder="Last Name" required>
+                    <input id="email" type="text" name="username" placeholder="Email" required>
+                    <input id="password" type="password" name="password" placeholder="Password" required>
+                    <input id="password2" type="password" name="password2" placeholder="Confirm password" required>
+                    <div class="checkboxTerms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I accept the <a href="#terms-of-use">Terms of Use</a> & <a href="#privacy-policy">Privacy Policy</a></label>
+                    </div>
+                    <button class="signupSubmit" type="submit">Sign Up</button>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="hotline">
+            <h1>Delivery Hotline</h1>
+            <p>1-800-123-4567</p>
+        </div> 
+        <div class="footerContent">
+            <p>© 2024 Meemeow's GitCafe</p>
+            <p>This site is created for educational purpose only!!</p>
+        </div>
+        <div class="terms">
+            <h1>Terms and Conditions</h1>
+            <p>Privacy Policy</p>
+            <p>Terms of Use</p>
+            <p>Refund Policy</p>
+        </div>
+    </div>
+
+<script src="ASSETS/JS/login_signupScript.js"></script>
+</body>
+</html>
