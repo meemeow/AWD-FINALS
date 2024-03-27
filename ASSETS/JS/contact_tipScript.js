@@ -30,6 +30,12 @@ window.onload = function() {
             navLinks[i].classList.add('active');
         }
     }
+
+    var form = document.querySelector('form');
+    form.addEventListener('submit', function(event) {
+        alert("Message sent successfully!");
+        window.location.reload();
+    });
 }
 
 document.getElementById('gcash').addEventListener('click', function() {
