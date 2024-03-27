@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Rubik+Mono+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg {
+    width: 100%;
+    height: 100vh !important;
+    background-image: url('https://cdn.wallpapersafari.com/7/32/ZvhbSK.gif');
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+nav {
+    background-color: #110d0a;
+    padding: 30px;
+}
+
+nav img {
+    width: 79px;
+    height: 79px;
+    border-radius: 50%;
+    margin-left: 35px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    z-index: 2;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: right;
+    margin-left: 25px;
+    margin-right: 20px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 20px;
+    font-style: normal;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+nav li a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .3s ease;
+    width: 0;
+}
+
+nav li a:hover::after {
+    width: 100%;
+}
+
+nav li a:hover {
+    color: #ff0000; 
+}
+
+nav li a.active {
+    color: #ff0000; 
+}
+
+
+.hOne {
+    position: absolute;
+    top: 21.5%;
+    left: 14.8%;
+    color: white;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hOne h1{
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    text-align: center;
+    font-size: 87px;
+    -webkit-text-stroke: 3px black;
+    border-radius: 13px;
+    box-shadow: 0px 7px 7px rgba(0,0,0,0.75),
+                0px -1px 7px rgba(0,0,0,0.75);
+}
+
+
+.hover-effect {
+    display: inline-block;
+    transition: all 0.5s ease;
+    cursor: context-menu;
+    box-sizing: border-box;
+    padding: 15px 30px;
+    border: 5px solid transparent;
+}
+
+.hover-effect:hover {
+    border-radius: 13px;
+    border: 5px solid #110d0a;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    transform: scale(1.04);
+    background-color: #0a220a;
+    color: white;
+    margin-right: 20px;
+}
+
+.hover-effect::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 5px;
+    bottom: 15px;
+    left: 20px;
+    border-radius: 10px;
+    border: 3px solid #110d0a;
+    background-color: #ffffff;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+.hover-effect:hover::before {
+    visibility: visible;
+    width: 92%;
+}
+
+.hover-effect1 {
+    display: inline-block;
+    transition: all 0.5s ease;
+    cursor: context-menu;
+    box-sizing: border-box;
+    padding: 15px 30px;
+    border: 5px solid transparent;
+}
+
+.hover-effect1:hover {
+    border-radius: 13px;
+    border: 5px solid #110d0a;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    transform: scale(1.04);
+    background-color: white;
+    color: #193819;
+    margin-right: 20px;
+}
+
+.hover-effect1::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 5px;
+    bottom: 15px;
+    left: 20px;
+    border-radius: 10px;
+    border: 3px solid #110d0a;
+    background-color: #193819;
+    visibility: hidden;
+    transition: all 0.4s ease;
+}
+
+.hover-effect1:hover::before {
+    visibility: visible;
+    width: 92%;
+}
+
+
+.hTwo {
+    position: absolute;
+    top: 10%;
+    left: 3.9%;
+    color: white;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hTwo h2{
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700px;
+    font-style: normal;
+    font-size: 32px;
+    color: #0a220a;
+}
+
+.para {
+    position: absolute;
+    top: 55%;
+    left: 16%;
+    color: white;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.para p{
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400px;
+    font-style: normal;
+    font-size: 22px;
+    color: #0a220a;
+}
+
+.bord {
+    position: absolute;
+    left: 30.5%;
+    top: 40.5%;
+    width: 39.5%;
+    height: 10%;
+    border-radius: 13px;
+    padding: 10px 20px;
+    background-color: white;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #110d0a;
+    box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.75);
+}
+
+
+.coffee-button {
+    position: absolute;
+    left: 43%;
+    top: 56%;
+    width: auto;
+    height: auto;
+    border-radius: 13px;
+    padding: 13px 25px;
+    background-color: white;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #110d0a;
+    box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.75);
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    text-align: center;
+    cursor: pointer;
+    transition: ease 0.1s;
+    color: #0a220a;
+}
+
+.coffee-button:hover {
+    background-color: #0a220a; 
+    color: white;
+    transform: scale(1.03);
+}
+
+.coffee-button:active{
+    background-color: #193819; 
+    color: white;
+    transform: scale(0.98);
+}
+
+.footer {
+    width: 100%;
+    height: 24vh !important;
+    position: relative;
+    background-color: #110d0a;
+}
+
+.footer .hotline {
+    position: absolute;
+    padding: 40px;
+    padding-top: 90px;
+    padding-bottom: 20px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    left: 3%;
+}
+
+.footer .hotline h1 {
+    font-weight: 20px;
+    font-size: 26px;
+    font-style: normal;
+    color: #ecfff5;
+    margin-bottom: 9px;
+}
+
+.footer .hotline p {
+    font-weight: 20px;
+    color: #ecfff5;
+    font-size: 18px;
+}
+
+.footer .footerContent {
+    position: absolute;
+    padding: 40px;
+    padding-top: 115px;
+    padding-bottom: 20px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;   
+    left: 37.5%;
+}
+
+.footer .footerContent p {
+    font-weight: 20px;
+    font-size: 18px;
+    font-style: normal;
+    color: #ecfff5;
+    text-align: center;
+}
+
+.footer .terms {  
+    position: absolute;
+    padding: 40px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    left: 77%;
+}
+
+.footer .terms h1 {
+    font-size: 26px;
+    font-weight: 20px;
+    font-style: normal;
+    color: #ecfff5;
+    margin-bottom: 13px;
+}
+
+.footer .terms p {
+    font-size: 16px;
+    margin-top: 8px;
+    font-weight: 15px;
+    font-style: normal;
+    color: #ecfff5;
+    position: relative; 
+}
+
+.footer .terms p:hover {
+    color: red;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: 0.3s ease;
+}
