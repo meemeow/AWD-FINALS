@@ -208,7 +208,7 @@ document.getElementById('placeOrder').addEventListener('click', function() {
 
     // Check if all fields are filled
     if (!order.cash || !order.name || !order.phone || !order.address || parseFloat(order.cash) < parseFloat(order.total)) {
-        alert('Please fill all fields and ensure cash is not less than total price');
+        alert('Please fill out the required fields before proceeding!!');
         return;
     }
 
