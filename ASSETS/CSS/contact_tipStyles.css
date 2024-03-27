@@ -1,0 +1,873 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Rubik+Mono+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg {
+    width: 100%;
+    height: 100vh !important;
+    background-image: url('https://cdn.wallpapersafari.com/7/32/ZvhbSK.gif');
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+nav {
+    background-color: #110d0a;
+    padding: 30px;
+}
+
+nav img {
+    width: 79px;
+    height: 79px;
+    border-radius: 50%;
+    margin-left: 35px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    z-index: 2;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: right;
+    margin-left: 25px;
+    margin-right: 20px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 20px;
+    font-style: normal;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+nav li a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .3s ease;
+    width: 0;
+}
+
+nav li a:hover::after {
+    width: 100%;
+}
+
+nav li a:hover {
+    color: #ff0000; 
+}
+
+nav li a.active {
+    color: #ff0000; 
+}
+
+
+.meetTheTeam {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 61%;
+    height: 50%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 11px 5px -5px rgba(44, 44, 44, 0.6);
+}
+
+.meetTheTeamTitle {
+    position: absolute;
+    top: 1%;
+    left: 35.45%;
+    width: 30%;
+    height: 17%;
+    border-radius: 11px;
+    background-color: white;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 7px solid #110d0a;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+}
+
+.meetTheTeamTitle h1{
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 21px;
+    text-align: center;
+}
+
+.teamMember {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.teamMember h2{
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700px;
+    font-style: normal;
+    font-size: 20px;
+    margin: 6px 0;
+}
+
+.teamMember h3{
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+}
+
+.teamMember1 {
+    position: absolute;
+    top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.teamMember1 h2{
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700px;
+    font-style: normal;
+    font-size: 20px;
+    margin: 6px 0;
+}
+
+.teamImages {
+    position: absolute;
+    top: 118px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.teamImages img{
+    width: 33%;
+    height: auto;
+}
+
+.teamMember1 img {
+    width: 40%;
+    height: auto;
+}
+
+#memo {
+    margin-right: 110px;
+}
+
+#sere {
+    margin-left: 110px;
+}
+
+.teamImage {
+    border-radius: 30%;
+    border: 3px solid #110d0a;
+    box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.75);
+}
+
+
+.faqs {
+    position: absolute;
+    top: 56%;
+    left: 1.5%;
+    width: 20%;
+    height: 40.5%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 11px -11px 5px -5px rgba(44, 44, 44, 0.6);
+}
+
+.faqTitle {
+    position: absolute;
+    top: 4%;
+}
+
+.faqTitle h1 {
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+    text-align: center;
+}
+
+.firstFAQ {
+    position: absolute;
+    top: 21%;
+    left: 5%;
+    width: 90%;
+    height: 20%;
+    border-radius: 13px;
+    background-color: white;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #110d0a;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+}
+
+.firstFAQ h2 {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+}
+
+.firstFAQ p {
+    position: absolute;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    text-align: center;
+}
+
+.secondFAQ {
+    position: absolute;
+    top: 46%;
+    left: 5%;
+    width: 90%;
+    height: 20%;
+    border-radius: 13px;
+    background-color: white;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #110d0a;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+}
+
+.secondFAQ h2 {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+}
+
+.secondFAQ p {
+    position: absolute;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    text-align: center;
+}
+
+.thirdFAQ {
+    position: absolute;
+    top: 71%;
+    left: 5%;
+    width: 90%;
+    height: 20%;
+    border-radius: 13px;
+    background-color: white;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #110d0a;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+}
+
+.thirdFAQ h2 {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+}
+
+.thirdFAQ p {
+    position: absolute;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    text-align: center;
+}
+
+
+.faq {
+    text-align: center;
+}
+
+.faq p {
+    max-height: 0;
+    opacity: 0;
+    transition: opacity 1s ease; 
+    overflow: hidden;
+}
+
+.faq:hover p {
+    max-height: 100px; 
+    opacity: 1;
+}
+
+.faq h2 {
+    transition: opacity 0.5s ease;
+}
+
+.faq:hover h2 {
+    opacity: 0;
+}
+
+#gcash.expanded {
+    height: 122px;
+}
+
+.gcash img {
+    position: absolute;
+    width: 30%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.faq.gcash {
+    transition: all 0.5s ease;
+}
+
+
+
+.socials {
+    position: absolute;
+    top: 56%;
+    left: 22.5%;
+    width: 20%;
+    height: 39%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: -11px 0 5px -5px rgba(44, 44, 44, 0.6), 
+                0 -11px 5px -5px rgba(44, 44, 44, 0.6), 
+                11px 0 5px -5px rgba(44, 44, 44, 0.6);
+}
+
+.socialsTitle {
+    position: absolute;
+    top: 4%;
+}
+
+.socialsTitle h1 {
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+    text-align: center;
+}
+
+
+.fourbyfour {
+    position: absolute;
+    top: 62px;
+    width: 60%;
+    height: 71%;
+}
+
+.fourbyfour a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fourbyfour img {
+    width: 55%;
+    height: auto;
+}
+
+.firstbox, .secondbox, .thirdbox, .fourthbox {
+    position: absolute;
+    width: calc(50% - 10px);
+    height: calc(50% - 10px); 
+    border: 4px solid #110d0a;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 13px;
+    margin: 5px; 
+    transition: ease 0.2s;
+}
+
+.firstbox:hover, .secondbox:hover, .thirdbox:hover, .fourthbox:hover {
+    background-color: #0a220a;
+    color: white;
+    transform: scale(1.04);
+}
+
+.firstbox:active, .secondbox:active, .thirdbox:active, .fourthbox:active {
+    background-color: #193819; 
+    color: white;
+    transform: scale(0.98);
+}
+
+.firstbox {
+    left: 0;
+    top: 0;
+}
+
+.secondbox {
+    right: 0;
+    top: 0;
+}
+
+.thirdbox {
+    left: 0;
+    bottom: 0;
+}
+
+.fourthbox {
+    right: 0;
+    bottom: 0;
+}
+
+.firstbox img, .secondbox img, .thirdbox img, .fourthbox img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.tipTitle {
+    position: absolute;
+    top: 4%;
+}
+
+.tipTitle h1 {
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+    text-align: center;
+}
+
+
+
+.tip {
+    position: absolute;
+    top: 56%;
+    left: 43.5%;
+    width: 20%;
+    height: 40.5%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: -11px -11px 5px -5px rgba(44, 44, 44, 0.6);
+}
+
+
+
+.gcash {
+    position: absolute;
+    top: 21%;
+    left: 5%;
+    width: 90%;
+    height: 20%;
+    border-radius: 13px;
+    background-color: white;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #110d0a;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+}
+
+.gcash h2 {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+}
+
+.gcash p {
+    position: absolute;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    text-align: center;
+}
+
+
+.paypal {
+    position: absolute;
+    top: 71%;
+    left: 5%;
+    width: 90%;
+    height: 20%;
+    border-radius: 13px;
+    background-color: white;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #110d0a;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+}
+
+.paypal h2 {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+}
+
+.paypal p {
+    position: absolute;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    text-align: center;
+}
+
+.coffeequote {
+    position: absolute;
+    width: 90%;
+    top: 59%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coffeequote h2 {
+    position: absolute;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 22px;
+    text-align: center;
+}
+
+.coffeequote1 {
+    position: absolute;
+    width: 90%;
+    top: 49%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coffeequote1 p {
+    position: absolute;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    text-align: center;
+}
+
+
+
+
+
+
+.contactTitle{
+    position: relative;
+    top: 7%;
+    left: 41.5%;
+    width: 17.5%;
+    height: 7.8%;
+    border-radius: 13px;
+    background-color: white;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 7px solid #110d0a;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+}
+
+.contactTitle h1{
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    text-align: center;
+}
+
+.contactBody {
+    position: relative;
+    top: 13%;
+    left: 3%;
+    width: 93%;
+    height: 73%;
+    border-radius: 13px;
+    background-color: #ecfff5;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 7px solid #110d0a;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+}
+
+.contactForm {
+    position: absolute;
+    left: 65%;
+    height: 102%;
+    width: 35%;
+    border: 4px solid #110d0a;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contactForm h2 {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 20px;
+    font-style: normal;
+    font-size: 22px;
+}
+
+.contactFormTitle {
+    position: relative;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+    position: relative;
+    box-shadow: 0 5px 5px -5px rgba(44, 44, 44, 0.6);
+    width: 97%;
+    height: 45px;
+    padding: 10px;
+    color: #0a220a;
+}
+
+
+form {
+    margin-top: 10px;
+    width: 90%;
+}
+
+form h3 {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 20px;
+    font-style: normal;
+    font-size: 16px;
+    color: #0a220a;
+    margin: 0 0 5px 18px;
+}
+
+.contactForm input[type="text"]{
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    background-color: #ffffff;
+    font-size: 17px;
+    margin: 0 11px 10px 16px;
+    padding: 15px 20px;
+    width: 100%;
+    border: none;
+    border-radius: 13px;
+    border: 3px solid #110d0a;
+}
+
+textarea[name="description"] {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #ffffff;
+    font-size: 15px;
+    margin: 0 11px 10px 16px;
+    padding: 15px 20px;
+    width: 100%;
+    border: none;
+    border-radius: 13px;
+    border: 3px solid #110d0a;
+    resize: none;
+    height: 130px;
+    overflow: auto;
+}
+
+textarea[name="description"]::placeholder {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+}
+
+.contactForm input[type="submit"] {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 17px;
+    width: 23%;
+    padding: 8px 13px;
+    background-color: #0a220a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin: 5px 11px 10px 16px;
+    display: block;
+    border: 4px solid #110d0a;
+}
+
+.contactForm input[type="submit"]:hover{
+    transform: scale(1.03);
+}
+
+.contactForm input[type="submit"]:active {
+    background-color: #193819; 
+    color: white;
+    transform: scale(0.98);
+}
+
+
+.footer {
+    width: 100%;
+    height: 24vh !important;
+    position: relative;
+    background-color: #110d0a;
+}
+
+.footer .hotline {
+    position: absolute;
+    padding: 40px;
+    padding-top: 90px;
+    padding-bottom: 20px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    left: 3%;
+}
+
+.footer .hotline h1 {
+    font-weight: 20px;
+    font-size: 26px;
+    font-style: normal;
+    color: #ecfff5;
+    margin-bottom: 9px;
+}
+
+.footer .hotline p {
+    font-weight: 20px;
+    color: #ecfff5;
+    font-size: 18px;
+}
+
+.footer .footerContent {
+    position: absolute;
+    padding: 40px;
+    padding-top: 115px;
+    padding-bottom: 20px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;   
+    left: 37.5%;
+}
+
+.footer .footerContent p {
+    font-weight: 20px;
+    font-size: 18px;
+    font-style: normal;
+    color: #ecfff5;
+    text-align: center;
+}
+
+.footer .terms {  
+    position: absolute;
+    padding: 40px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    left: 77%;
+}
+
+.footer .terms h1 {
+    font-size: 26px;
+    font-weight: 20px;
+    font-style: normal;
+    color: #ecfff5;
+    margin-bottom: 13px;
+}
+
+.footer .terms p {
+    font-size: 16px;
+    margin-top: 8px;
+    font-weight: 15px;
+    font-style: normal;
+    color: #ecfff5;
+    position: relative; 
+}
+
+.footer .terms p:hover {
+    color: red;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: 0.3s ease;
+}
