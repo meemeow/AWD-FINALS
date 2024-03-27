@@ -262,7 +262,7 @@ nav li a.active {
     height: auto;
     border-radius: 13px;
     padding: 13px 25px;
-    background-color: white;
+    background-color: #0a220a;
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -276,18 +276,15 @@ nav li a.active {
     text-align: center;
     cursor: pointer;
     transition: ease 0.1s;
-    color: #0a220a;
+    color: white;
 }
 
 .coffee-button:hover {
-    background-color: #0a220a; 
-    color: white;
     transform: scale(1.03);
 }
 
 .coffee-button:active{
     background-color: #193819; 
-    color: white;
     transform: scale(0.98);
 }
 
