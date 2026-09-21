@@ -4,20 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order</title>
-    <link rel="stylesheet" type="text/css" href="ASSETS/CSS/orderStyles.css">
-    <link rel="icon" type="image/x-icon" href="ASSETS/IMAGES/logo.png">
+    <link rel="stylesheet" type="text/css" href="assets/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/order.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
 </head>
 <body>
 
     <!-- nav -->
     <nav>
         <div class="logo">
-            <a href="index.html"><img src="ASSETS/IMAGES/logo.png" alt="Logo"></a>
+            <a href="index.html"><img src="assets/images/logo.png" alt="Logo"></a>
         </div>
-        <ul>
-            <li><a href="login_signup.html">Login / Signup</a></li>
-            <li><a href="contact_tip.html">Contact Us</a></li>
-            <li><a href="trackmyorder.html">Track your Order</a></li>
+        <button class="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+            <span class="navToggleBar"></span>
+            <span class="navToggleBar"></span>
+            <span class="navToggleBar"></span>
+        </button>
+        <ul id="navMenu">
+            <li><a href="login-signup.html">Login / Signup</a></li>
+            <li><a href="contacts.html">Contact Us</a></li>
+            <li><a href="track-my-order.html">Track your Order</a></li>
             <li><a href="order.html">Order</a></li>
             <li><a href="index.html">Home</a></li>
         </ul>
@@ -41,28 +47,28 @@
                     <div class="overlay">
                         <h1 class="price">$4.25</h1>
                     </div>
-                    <img src="ASSETS/IMAGES/item1.png" alt="Image 1">
+                    <img src="assets/images/item1.png" alt="Image 1">
                     <button class="menuButton" id="firstMenu" data-price="$4.25">Latte</button>
                 </div>
                 <div class="box">
                     <div class="overlay">
                         <h1 class="price">$3.50</h1>
                     </div>
-                    <img src="ASSETS/IMAGES/item2.png" alt="Image 2">
+                    <img src="assets/images/item2.png" alt="Image 2">
                     <button class="menuButton" id="secondMenu" data-price="$3.50">Espresso</button>
                 </div>
                 <div class="box">
                     <div class="overlay">
                         <h1 class="price">$4.15</h1>
                     </div>
-                    <img src="ASSETS/IMAGES/item3.png" alt="Image 3">
+                    <img src="assets/images/item3.png" alt="Image 3">
                     <button class="menuButton" id="thirdMenu" data-price="$4.00">Frappe</button>
                 </div>
                 <div class="box">
                     <div class="overlay">
                         <h1 class="price">$3.75</h1>
                     </div>
-                    <img src="ASSETS/IMAGES/item4.png" alt="Image 4">
+                    <img src="assets/images/item4.png" alt="Image 4">
                     <button class="menuButton" id="fourthMenu" data-price="$3.00">Iced Coffee</button> 
                 </div>
             </div>
@@ -208,6 +214,7 @@
         </div>
     </div>
 
-    <script src="ASSETS/JS/orderScript.js"></script>
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/order.js"></script>
 </body>
 </html>

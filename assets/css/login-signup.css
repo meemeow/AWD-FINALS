@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Rubik+Mono+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg {
+    width: 100%;
+    height: 100vh !important;
+    background-image: url('https://cdn.wallpapersafari.com/7/32/ZvhbSK.gif');
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+.container {
+    position: absolute;
+    background-color: #ecfff5;
+    z-index: 1;
+    width: 620px; 
+    min-height: 800px;
+    margin-top: 55px; 
+    margin-bottom: 100px; 
+    border-radius: 14px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    left: 33.3%;
+    border-radius: 13px;
+    border: 8px solid #110d0a;
+}
+
+.button-container {
+    position: relative;
+    display: flex;
+}
+
+.button-container .login-button.active,
+.button-container .signup-button.active {
+    background-color: #0a220a;
+    color: white;
+}
+
+.button-container .login-button,
+.button-container .signup-button {
+    background-color: #f4f4f4;
+    color: black;
+}
+
+.button-container .login-button {
+    position: relative;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    padding: 30px;
+    width: 50%;
+    background-color: #fafafa;
+    border-radius: 3px 0 10px 0;
+    border: none;
+    cursor: pointer;
+    transition: ease 0.3s;
+}
+
+.button-container .signup-button {
+    position: relative;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    padding: 35px 25px;
+    width: 50%;
+    background-color: #fafafa;
+    border-radius: 0px 3px 0 10px;
+    border: none;
+    cursor: pointer;
+    transition: ease 0.1s;
+}
+
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    background-color: #ffffff;
+    font-size: 17px;
+    margin: 0 10px 20px 14px;
+    padding: 25px 30px;
+    width: 95%;
+    border: none;
+    border-radius: 19px;
+    border: 3px solid #110d0a;
+}
+
+.loginSubmit {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 19px;
+    width: 95%;
+    padding: 25px 45px;
+    margin-top: 7px;
+    background-color: #0a220a;
+    color: white;
+    border: none;
+    border-radius: 19px;
+    margin: 10px 10px 0 14px;
+    display: block;
+    cursor: pointer;
+    border: 4px solid #110d0a;
+}
+
+.loginSubmit:hover{
+    transform: scale(1.01);
+}
+
+.loginSubmit:active {
+    background-color: #193819; 
+    color: white;
+    transform: scale(0.99);
+}
+
+.login-form p {
+    position: relative;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    color: #0a220a;
+    padding: 20px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.login-form a {
+    text-decoration: none;
+}
+
+.signin-link {
+    position: relative;
+    box-shadow: 0 -5px 5px -5px rgba(44, 44, 44, 0.6);
+    width: 94%;
+    height: 300px;
+    margin: auto;
+    padding-top: 7px;
+}
+
+.signin-link a {
+    text-decoration: none;
+}
+
+.signin-link .btn {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    width: 95%;
+    padding: 20px 45px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 19px;
+    display: block;
+    border: none;
+    border: 3px solid #110d0a;
+    margin: 23px 10px 0 14px;
+    cursor: pointer;
+}
+
+.signin-link .btn:active {
+    background-color: #f0f0f0; 
+}
+
+.signin-link .btn:hover{
+    transform: scale(1.01);
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+}
+
+.btn img {
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
+    margin-right: 10px;
+    left: 0;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    margin-top: 10px;
+    display: none;
+}
+
+.signup-form .signupBanner {
+    position: relative;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
+    position: relative;
+    box-shadow: 0 5px 5px -5px rgba(44, 44, 44, 0.6);
+    width: 97%;
+    height: 31px;
+    margin: auto;
+    padding: 5px
+}
+
+.signup-form .signupBanner h2{
+    position: absolute;
+    top: -7px;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="password"] {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    background-color: #ffffff;
+    font-size: 17px;
+    margin: 25px 10px 0 14px;
+    padding: 25px 30px;
+    width: 95%;
+    border: none;
+    border-radius: 19px;
+    border: 3px solid #110d0a;
+}
+
+.signup-form .checkboxTerms{
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    margin: 19px 10px 15px 19px;
+}
+
+.signupSubmit {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 19px;
+    width: 95%;
+    padding: 25px 45px;
+    margin-top: 15px;
+    background-color: #0a220a;
+    color: white;
+    border: none;
+    border-radius: 19px;
+    margin: 10px 10px 0 14px;
+    display: block;
+    border: 4px solid #110d0a;
+}
+
+.signupSubmit:hover{
+    transform: scale(1.01);
+}
+
+.signupSubmit:active {
+    background-color: #193819; 
+    color: white;
+    transform: scale(0.99);
+}

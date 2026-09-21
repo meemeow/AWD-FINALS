@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Rubik+Mono+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg {
+    width: 100%;
+    height: 100vh !important;
+    background-image: url('https://cdn.wallpapersafari.com/7/32/ZvhbSK.gif');
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+.receipt {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    top: 7%;
+    left: 35.8%;
+    z-index: 2;
+    width: 30%;
+    height: 70%;
+    background-color: #ecfff5;
+    border-radius: 13px;
+    padding: 20px;
+    border: 4px solid #110d0a;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 20px;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.returnButton {
+    position: absolute;
+    top: 82%;
+    left: 44.4%;
+    width: 13.4%;
+    height: 7%;
+    border-radius: 13px;
+    padding: 10px 15px;
+    background-color: white;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #110d0a;
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+}
+
+.returnButton:hover {
+    background-color: #0a220a; 
+    color: white;
+    transform: scale(1.06);
+}
+
+.returnButton:active{
+    background-color: #193819; 
+    color: white;
+    transform: scale(0.96);
+}
+
+
+.receiptHeader {
+    position: absolute;
+    top: 35px;
+    left: 16.9%;
+}
+
+.receiptHeader h1{
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 20px;
+    font-style: normal;
+    font-size: 27px;
+    color: #110d0a;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.receiptBody {
+    position: absolute;
+    top: 100px;
+    left: 34%;
+}
+
+.receiptBody h2 {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 20px;
+    font-style: normal;
+    font-size: 18px;
+    color: #110d0a;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.receiptBody h3 {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 20px;
+    font-style: normal;
+    font-size: 17px;
+    color: #110d0a;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.receiptBody p {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 20px;
+    font-style: normal;
+    font-size: 15px;
+    color: #110d0a;
+    text-align: left;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+#quantity {
+    position: absolute;
+    left: 0;
+    top: -30px;
+}
+
+#type {
+    position: absolute;
+    left: 50px;
+    top: -30px;
+}
+
+#amount {
+    position: absolute;
+    left: 125px;
+    top: -30px;
+}
+
+
+#total1 {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 20px;
+    font-style: normal;
+    font-size: 17px;
+    color: #110d0a;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#cash1 {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 20px;
+    font-style: normal;
+    font-size: 17px;
+    color: #110d0a;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#change1 {
+    position: absolute;
+    left: 0;
+    top: 62px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 20px;
+    font-style: normal;
+    font-size: 17px;
+    color: #110d0a;
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+.receiptTotal {
+    position: absolute;
+    top: 170px;
+    left: 34%;
+}
+
+.receiptTotal p {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 20px;
+    font-style: normal;
+    font-size: 15px;
+    color: #110d0a;
+    text-align: right;
+}
+
+.receiptDetails {
+    position: absolute;
+    top: 273px;
+    left: 24%;
+}
+
+.receiptDetails h2 {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 20px;
+    font-style: normal;
+    font-size: 20px;
+    color: #110d0a;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.receiptDetails h3 {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 20px;
+    font-style: normal;
+    font-size: 17px;
+    color: #110d0a;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.receiptDetails p {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 20px;
+    font-style: normal;
+    font-size: 15px;
+    color: #110d0a;
+    text-align: right;
+    margin-top: 13.4px;
+    position: absolute;
+    left: 110px;
+    width: 200px;
+}
+
+#deets{
+    position: absolute;
+    left: 62px;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    width: 190px;
+}
+
+
+#name2{
+    position: absolute;
+    top: 26px;
+}
+
+#phone2 {
+    position: absolute;
+    top: 55px;
+}
+
+#address2 {
+    position: absolute;
+    top: 85px;
+}
+
+#name1 {
+    position: absolute;
+    left: 0;
+    top: 33px;
+}
+
+#phone1 {
+    position: absolute;
+    left: 0;
+    top: 63px;
+}
+
+#address1 {
+    position: absolute;
+    left: 0;
+    top: 93px;
+}
+
+
+.receiptFooter {
+    position: absolute;
+    bottom: 30px;
+    left: 18.5%;
+}
+
+.receiptFooter h2 {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 20px;
+    font-style: normal;
+    font-size: 19px;
+    color: #110d0a;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.receiptFooter h3 {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 20px;
+    font-style: normal;
+    font-size: 17px;
+    color: #110d0a;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.receiptFooter p {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 20px;
+    font-style: normal;
+    font-size: 14px;
+    color: #110d0a;
+    text-align: center;
+}
+
+#credits {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 20px;
+    font-style: normal;
+    font-size: 17px;
+    color: #110d0a;
+    text-align: center;
+    margin-top: 13px;
+}

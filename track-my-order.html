@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Track My Order</title>
     <link rel="stylesheet" type="text/css" href="assets/css/layout.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/track-my-order.css">
     <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
 </head>
 <body>
@@ -31,18 +31,11 @@
 
     
     <div class="bg">
-        <div class="hOne">
-            <h1><span class="hover-effect">Coffee</span> or <span class="hover-effect1">off-key?</span></h1>
+        <div class="bg">
+            <div class="bgmap">
+                <div id="map"></div>
+            </div>
         </div>
-        <div class="bord">
-        <div class="hTwo">
-            <h2>Tune into flavor with our doorstep delivery!</h2>
-        </div>
-        <div class="para">
-            <p>Grab yourself a coffee. Made just right, for you. ~</p>
-        </div>
-        </div>
-        <button class="coffee-button" onclick="redirectToOrder()">Get Coffee</button>
     </div>
 
     <div class="footer">
@@ -62,7 +55,8 @@
         </div>
     </div>
 
-<script src="assets/js/nav.js"></script>
-<script src="assets/js/index.js"></script>
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/track-my-order.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>
 </body>
 </html>
