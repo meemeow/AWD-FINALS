@@ -6,7 +6,7 @@
    responsive behaviour lives in the media queries at the bottom.
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 
 /* ---------------------------- NAV ---------------------------- */
@@ -23,8 +23,9 @@ nav img {
     border-radius: 50%;
     margin-left: 35px;
     position: absolute;
-    top: 2px;
+    top: 50%;
     left: 0;
+    transform: translateY(-50%);
     z-index: 2;
 }
 
@@ -33,6 +34,11 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    /* row-reverse keeps the existing right-to-left source order while
+       align-items centres the taller Login button against the links */
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
 }
 
 nav li {
@@ -79,6 +85,11 @@ nav li a:hover::after {
     width: 100%;
 }
 
+/* the current page is marked by the red text alone, no underline */
+nav li a.active::after {
+    display: none;
+}
+
 nav li a:hover {
     color: #ff0000;
 }
@@ -87,6 +98,62 @@ nav li a.active {
     color: #ff0000;
 }
 
+
+
+/* ---------------- LOGIN / SIGNUP BUTTON ---------------- */
+
+/* same treatment as the Get Coffee button on the home page */
+.navCta a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 9px;
+    padding: 8px 20px;
+    background-color: #1b5c2a;
+    border: 3px solid #0b3315;
+    box-shadow: 0 5px 0 0 #0b3315;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.12s ease, transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.navCtaIcon {
+    width: 17px;
+    height: 17px;
+    flex: none;
+    color: #ffffff;
+}
+
+/* the sliding underline belongs to the plain links, not the button */
+.navCta a::after {
+    display: none;
+}
+
+.navCta a:hover {
+    background-color: #24703a;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 0 0 #0b3315;
+}
+
+.navCta a:active {
+    background-color: #10391a;
+    color: white;
+    transform: translateY(5px);
+    box-shadow: 0 0 0 0 #0b3315;
+}
+
+.navCta a.active {
+    background-color: #10391a;
+    color: white;
+}
 
 /* ----------------------- BURGER BUTTON -----------------------
    Hidden on desktop, shown once the links stop fitting.        */
@@ -135,17 +202,18 @@ nav.open .navToggleBar:nth-child(3) {
 
 
 /* --------------------------- FOOTER ---------------------------
-   Three equal columns on one row. The height comes from the
-   content, not from a vh value, so zooming out no longer leaves
-   a tall empty band under the text.                             */
+   One line on desktop: each group lays its heading and lines out
+   side by side so the whole bar is a single row. It stacks into
+   columns below 1180px, where one line no longer fits.          */
 
 .footer {
     width: 100%;
     background-color: #110d0a;
     display: flex;
     align-items: center;
-    gap: 40px;
-    padding: 34px 5%;
+    justify-content: space-between;
+    gap: clamp(14px, 1.6vw, 34px);
+    padding: clamp(14px, 1.2vw, 24px) clamp(16px, 2.6vw, 50px);
     font-family: "Rubik", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -154,46 +222,41 @@ nav.open .navToggleBar:nth-child(3) {
 .footer .hotline,
 .footer .footerContent,
 .footer .terms {
+    flex: 0 1 auto;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: clamp(7px, 0.7vw, 13px);
+    white-space: nowrap;
+}
+
+/* the outer groups take equal shares of the leftover space, which leaves
+   the copyright line centred in the bar rather than merely between them */
+.footer .hotline,
+.footer .terms {
     flex: 1 1 0;
-    text-align: center;
+}
+
+.footer .terms {
+    justify-content: flex-end;
 }
 
 .footer .hotline h1 {
-    font-weight: 20px;
-    font-size: 26px;
+    font-size: clamp(12px, 0.8vw, 16px);
+    font-weight: 600;
     font-style: normal;
     color: #ecfff5;
-    margin-bottom: 9px;
+    margin-bottom: 0;
 }
 
-.footer .hotline p {
-    font-weight: 20px;
-    color: #ecfff5;
-    font-size: 18px;
-}
-
-.footer .footerContent p {
-    font-weight: 20px;
-    font-size: 18px;
-    font-style: normal;
-    color: #ecfff5;
-}
-
-.footer .terms h1 {
-    font-size: 26px;
-    font-weight: 20px;
-    font-style: normal;
-    color: #ecfff5;
-    margin-bottom: 13px;
-}
-
+.footer .hotline p,
+.footer .footerContent p,
 .footer .terms p {
-    font-size: 16px;
-    margin-top: 8px;
-    font-weight: 15px;
+    font-size: clamp(11px, 0.72vw, 15px);
+    font-weight: 400;
     font-style: normal;
     color: #ecfff5;
-    position: relative;
+    margin-top: 0;
 }
 
 .footer .terms p:hover {
@@ -206,8 +269,8 @@ nav.open .navToggleBar:nth-child(3) {
 
 /* =========================== RESPONSIVE =========================== */
 
-/* Three columns stop fitting well before the nav runs out of room. */
-@media (max-width: 1024px) {
+/* One line stops fitting here, so the groups go back to stacked columns. */
+@media (max-width: 1180px) {
 
     .footer {
         flex-direction: column;
@@ -219,9 +282,27 @@ nav.open .navToggleBar:nth-child(3) {
     .footer .footerContent,
     .footer .terms {
         flex: 0 0 auto;
+        display: block;
         width: 100%;
         max-width: 420px;
         padding: 14px 0;
+        text-align: center;
+        white-space: normal;
+    }
+
+    .footer .hotline h1 {
+        font-size: 22px;
+        margin-bottom: 9px;
+    }
+
+    .footer .hotline p,
+    .footer .footerContent p {
+        font-size: 16px;
+    }
+
+    .footer .terms p {
+        font-size: 15px;
+        margin-top: 8px;
     }
 
     /* keep the copyright line at the bottom where it belongs */
@@ -245,7 +326,6 @@ nav.open .navToggleBar:nth-child(3) {
         width: 54px;
         height: 54px;
         margin-left: 10px;
-        top: 11px;
     }
 
     .navToggle {
@@ -260,6 +340,7 @@ nav.open .navToggleBar:nth-child(3) {
     nav ul {
         display: flex;
         flex-direction: column-reverse;
+        align-items: stretch;
         max-height: 0;
         visibility: hidden;
         transition: max-height .35s ease, visibility .35s ease;
@@ -287,6 +368,17 @@ nav.open .navToggleBar:nth-child(3) {
     nav li a::after {
         display: none;
     }
+
+    .navCta {
+        margin: 14px 0 4px;
+        text-align: center;
+    }
+
+    .navCta a {
+        display: inline-flex;
+        padding: 12px 24px;
+        text-align: center;
+    }
 }
 
 
@@ -301,7 +393,6 @@ nav.open .navToggleBar:nth-child(3) {
         width: 46px;
         height: 46px;
         margin-left: 6px;
-        top: 11px;
     }
 
     .navToggle {

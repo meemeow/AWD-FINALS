@@ -1,0 +1,24 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>l</title>
+<style>html,body{margin:0}#out{font:12px monospace;white-space:pre}iframe{border:0;position:absolute;left:-99999px;top:0}</style>
+</head><body><div id="out">running</div>
+<script>
+var f=document.createElement('iframe');
+f.width=1920;f.height=1080;f.style.width='1920px';f.style.height='1080px';
+f.onload=function(){setTimeout(function(){
+  var d=f.contentDocument,w=f.contentWindow;
+  var sv=d.querySelector('.heroLeaf');
+  var r=sv.getBoundingClientRect();
+  var bb=sv.getBBox?sv.getBBox():null;
+  var cs=w.getComputedStyle(sv);
+  var out='svgBox='+Math.round(r.width)+'x'+Math.round(r.height)+
+    ' cssW='+cs.width+' cssH='+cs.height;
+  if(bb) out+=' inkBBox=x'+bb.x+' y'+bb.y+' w'+bb.width+' h'+bb.height+
+    ' -> rendered '+Math.round(bb.width/16*r.width)+'x'+Math.round(bb.height/16*r.height)+'px';
+  ['leafLight','leafBody','leafRib'].forEach(function(c){
+    var p=sv.querySelector('.'+c);
+    out+='\n  .'+c+' fill='+w.getComputedStyle(p).fill+' bbox_w='+(p.getBBox?p.getBBox().width:'?');
+  });
+  document.getElementById('out').textContent=out;
+},400);};
+document.body.appendChild(f); f.src='http://localhost:3000/index.html';
+</script></body></html>

@@ -41,20 +41,20 @@ var signupForm = document.getElementById('signup-form');
 
 // Set the initial active button and form
 loginButton.classList.add('active');
-loginForm.style.display = 'block';
+loginForm.style.display = 'flex';
 signupForm.style.display = 'none';
 
 // Add event listeners
 loginButton.addEventListener('click', function() {
     loginButton.classList.add('active');
     signupButton.classList.remove('active');
-    loginForm.style.display = 'block';
+    loginForm.style.display = 'flex';
     signupForm.style.display = 'none';
 });
 
 signupButton.addEventListener('click', function() {
     signupButton.classList.add('active');
     loginButton.classList.remove('active');
-    signupForm.style.display = 'block';
+    signupForm.style.display = 'flex';
     loginForm.style.display = 'none';
 });

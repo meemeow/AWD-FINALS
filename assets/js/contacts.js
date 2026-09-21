@@ -37,22 +37,3 @@ window.onload = function() {
         window.location.reload();
     });
 }
-
-document.getElementById('gcash').addEventListener('click', function() {
-    var gcashqr = document.getElementById('gcashqr');
-    var gcashText = this.getElementsByTagName('p')[0];
-
-    if (gcashqr.style.display === 'none') {
-        gcashqr.style.display = 'block';
-        gcashText.style.display = 'none';
-        this.classList.add('expanded');
-    } else {
-        gcashqr.style.display = 'none';
-        gcashText.style.display = 'block';
-        this.classList.remove('expanded');
-    }
-});
-
-document.querySelector('.faq.gcash').addEventListener('click', function() {
-    this.classList.toggle('active');
-});

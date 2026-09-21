@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Meemeow&rsquo;s GitCafe</title>
     <link rel="stylesheet" type="text/css" href="assets/css/layout.css">
     <link rel="stylesheet" type="text/css" href="assets/css/contacts.css">
-    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="assets/images/favicon.png">
 </head>
 <body>
 
@@ -21,7 +21,11 @@
             <span class="navToggleBar"></span>
         </button>
         <ul id="navMenu">
-            <li><a href="login-signup.html">Login / Signup</a></li>
+            <li class="navCta"><a href="login-signup.html">
+                <!-- lucide: log-in -->
+                <svg class="navCtaIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" x2="3" y1="12" y2="12"/></svg>
+                Login
+            </a></li>
             <li><a href="contacts.html">Contact Us</a></li>
             <li><a href="track-my-order.html">Track your Order</a></li>
             <li><a href="order.html">Order</a></li>
@@ -29,118 +33,186 @@
         </ul>
     </nav>
 
-    
+
     <div class="bg">
-        <div class="contactTitle">
-            <h1>Contact Us</h1>
-        </div>
-        <div class="contactBody">
-            <div class="meetTheTeam">
-                <div class="meetTheTeamTitle">
-                    <h1>Meet the Team</h1>
-                </div>
-                <div class="teamMember1">
-                    <img id="logo" src="assets/images/logo.png" alt="Logo">
-                    <h2>Meemeow's GitCafe</h2>
-                </div>
-                <div class="teamImages">
-                    <div class="teamMember" id="memo">
-                        <img class="teamImage" src="assets/images/memo.png">
-                        <h2>Emerson Clamor</h2>
-                        <h3>emersonclamor69@gmail.com</h3>
-                        <h3>09152669845</h3>
-                    </div>
-                    <div class="teamMember" id="sere">
-                        <img class="teamImage" src="assets/images/sere.png">
-                        <h2>Serenity Dizon</h2>
-                        <h3>dhsm.27803@gmail.com</h3>
-                        <h3>09625628173</h3>
-                    </div>
-                </div>
+        <div class="pageLayout">
+
+            <!-- title sign -->
+            <div class="title">
+                <img src="assets/images/logo.png" alt="">
+                <h1>Contact Us</h1>
             </div>
-            <div class="faqs">
-                <div class="faqTitle">
-                    <h1>FAQs</h1>
-                </div>
-                <div class="faq firstFAQ">
-                    <h2>Where do my order go?</h2>
-                    <p>It's being delivered. /jk</p>
-                </div>
-                <div class="faq secondFAQ">
-                    <h2>What is the sense of this website?</h2>
-                    <p>The website is a simulation of a real coffee shop website.</p>
-                </div>
-                <div class="faq thirdFAQ">
-                    <h2>Why I can't login or signup?</h2>
-                    <p>The website is still in progress.</p>
-                </div>
-            </div>
-            <div class="socials">
-                <div class="socialsTitle">
-                    <h1>Socials</h1>
-                </div>
-                    <div class="fourbyfour"> 
-                        <div class="firstbox">
-                            <a href="https://www.facebook.com/"><img src="assets/images/facebook.png" alt="Facebook"></a>
+
+            <div class="board">
+                <div class="panels">
+
+                    <!-- everything but the form lives in this one panel -->
+                    <section class="panel infoPanel">
+
+                        <!-- meet the team -->
+                        <div class="infoSection team">
+                            <div class="subHead">
+                                <!-- lucide: users -->
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                <h2>Meet the Team</h2>
+                                <!-- lucide: sparkle -->
+                                <svg class="icon iconSm panelSpark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+                            </div>
+
+                            <div class="teamGrid">
+                                <div class="shopCard">
+                                    <img id="logo" src="assets/images/logo.png" alt="Logo">
+                                    <h3>Meemeow's GitCafe</h3>
+                                </div>
+
+                                <article class="teamMember" id="memo">
+                                    <img class="teamImage" src="assets/images/memo.png" alt="Emerson Clamor">
+                                    <h3>Emerson Clamor</h3>
+                                    <p>
+                                        <!-- lucide: mail -->
+                                        <svg class="icon iconSm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                        <span>emersonclamor69@gmail.com</span>
+                                    </p>
+                                    <p>
+                                        <!-- lucide: phone -->
+                                        <svg class="icon iconSm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                        <span>09152669845</span>
+                                    </p>
+                                </article>
+
+                                <article class="teamMember" id="sere">
+                                    <img class="teamImage" src="assets/images/sere.png" alt="Serenity Dizon">
+                                    <h3>Serenity Dizon</h3>
+                                    <p>
+                                        <!-- lucide: mail -->
+                                        <svg class="icon iconSm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                        <span>dhsm.27803@gmail.com</span>
+                                    </p>
+                                    <p>
+                                        <!-- lucide: phone -->
+                                        <svg class="icon iconSm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                        <span>09625628173</span>
+                                    </p>
+                                </article>
+                            </div>
                         </div>
-                        <div class="secondbox">
-                            <a href="https://www.instagram.com/"><img src="assets/images/instagram.png" alt="Instagram"></a>
+
+                        <!-- faqs -->
+                        <div class="infoSection faqs">
+                            <div class="subHead">
+                                <!-- lucide: circle-help -->
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+                                <h2>FAQs</h2>
+                            </div>
+
+                            <div class="faqGrid">
+                                <div class="faq firstFAQ">
+                                    <h3>Where does my order go?</h3>
+                                    <p>Once you check out, your order is prepared and dispatched for delivery. You can follow its progress on the Track your Order page.</p>
+                                </div>
+                                <div class="faq secondFAQ">
+                                    <h3>What is the purpose of this website?</h3>
+                                    <p>This is a coursework project that simulates the ordering experience of a real coffee shop.</p>
+                                </div>
+                                <div class="faq thirdFAQ">
+                                    <h3>Why can&rsquo;t I log in or sign up?</h3>
+                                    <p>Accounts are not yet available. The log in and sign up features are still in development.</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="thirdbox">
-                            <a href="https://www.twitter.com/"><img src="assets/images/x.png" alt="Twitter"></a>
+
+                        <!-- socials -->
+                        <div class="infoSection socials">
+                            <div class="subHead">
+                                <!-- lucide: share-2 -->
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
+                                <h2>Socials</h2>
+                            </div>
+
+                            <div class="fourbyfour">
+                                <a class="socialBox" href="https://www.facebook.com/" aria-label="Facebook"><img src="assets/images/facebook.png" alt="Facebook"></a>
+                                <a class="socialBox" href="https://www.instagram.com/" aria-label="Instagram"><img src="assets/images/instagram.png" alt="Instagram"></a>
+                                <a class="socialBox" href="https://www.twitter.com/" aria-label="Twitter"><img src="assets/images/x.png" alt="Twitter"></a>
+                                <a class="socialBox" href="https://www.github.com/" aria-label="Github"><img src="assets/images/github.png" alt="Github"></a>
+                            </div>
                         </div>
-                        <div class="fourthbox">
-                            <a href="https://www.github.com/"><img src="assets/images/github.png" alt="Github"></a>
+
+                    </section>
+
+                    <!-- reach out -->
+                    <section class="panel contactForm">
+                        <div class="panelHead">
+                            <!-- lucide: message-square -->
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            <h1>Reach out your concern</h1>
                         </div>
-                    </div>
-            </div>
-            <div class="tip">
-                <div class="tipTitle">
-                    <h1>Tip</h1>
+
+                        <form>
+                            <div class="field">
+                                <label for="cName">
+                                    <!-- lucide: user -->
+                                    <svg class="icon iconSm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                    Name
+                                </label>
+                                <input type="text" id="cName" name="name" placeholder="Enter name" required>
+                            </div>
+                            <div class="field">
+                                <label for="cPhone">
+                                    <!-- lucide: phone -->
+                                    <svg class="icon iconSm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                    Phone
+                                </label>
+                                <input type="text" id="cPhone" name="phone" placeholder="Enter phone" required>
+                            </div>
+                            <div class="field">
+                                <label for="cEmail">
+                                    <!-- lucide: mail -->
+                                    <svg class="icon iconSm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                    Email
+                                </label>
+                                <input type="text" id="cEmail" name="email" placeholder="Enter email" required>
+                            </div>
+                            <div class="field">
+                                <label for="cTitle">
+                                    <!-- lucide: tag -->
+                                    <svg class="icon iconSm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></svg>
+                                    Title
+                                </label>
+                                <input type="text" id="cTitle" name="title" placeholder="Enter title" required>
+                            </div>
+                            <div class="field fieldGrow">
+                                <label for="cDesc">
+                                    <!-- lucide: align-left -->
+                                    <svg class="icon iconSm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 12H3"/><path d="M17 18H3"/><path d="M21 6H3"/></svg>
+                                    Description
+                                </label>
+                                <textarea id="cDesc" name="description" placeholder="Enter description" required></textarea>
+                            </div>
+
+                            <button type="submit" class="submitButton">
+                                <!-- lucide: send -->
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>
+                                Send it!
+                            </button>
+                        </form>
+                    </section>
+
                 </div>
-                <div class="faq gcash" id="gcash">
-                    <h2>Gcash</h2>
-                    <p>Emerson C. 09152669845</p>
-                    <img id="gcashqr" src="assets/images/gcashqr.png" alt="Gcash" style="display: none;">
-                </div>
-                <div class="coffeequote1">
-                    <p id="click">↑↑↑ Click Here for QR :b ↑↑↑</p>
-                </div>
-                <div class="coffeequote">
-                    <h2>-----Espresso yourself~-----</h2>
-                </div>
-                <div class="faq paypal">
-                    <h2>Paypal</h2>
-                    <p>paypal.me/memoclamor01</p>
-                </div>
-            </div>
-            <div class="contactForm">
-                <div class="contactFormTitle">
-                    <h2>Reach out your concern</h2>
-                </div>
-                <form>
-                    <h3>Name:</h3><input type="text" name="name" placeholder="Enter name" required> 
-                    <h3>Phone:</h3><input type="text" name="phone" placeholder="Enter phone" required>
-                    <h3>Email:</h3><input type="text" name="email" placeholder="Enter email" required>
-                    <h3>Title:</h3><input type="text" name="title" placeholder="Enter title" required>
-                    <h3>Description:</h3><textarea name="description" placeholder="Enter description" required></textarea>
-                    <input type="submit" value="Submit">
-                </form>
             </div>
         </div>
     </div>
 
+    <!-- footer -->
     <div class="footer">
         <div class="hotline">
             <h1>Delivery Hotline</h1>
             <p>1-800-123-4567</p>
-        </div> 
+        </div>
         <div class="footerContent">
             <p>© 2024 Meemeow's GitCafe</p>
             <p>This site is created for educational purpose only!!</p>
         </div>
         <div class="terms">
-            <h1>Terms and Conditions</h1>
             <p>Privacy Policy</p>
             <p>Terms of Use</p>
             <p>Refund Policy</p>

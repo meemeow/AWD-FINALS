@@ -9,35 +9,104 @@
     box-sizing: border-box;
 }
 
+body {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+}
+
 .bg {
+    flex: 1 1 auto;
     width: 100%;
-    height: 100vh !important;
+    min-height: max(520px, calc(100svh - 210px));
     background-image: url('https://cdn.wallpapersafari.com/7/32/ZvhbSK.gif');
-    background-size: 100% 100%; 
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    position: relative;
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0;
 }
 
 
 .bgmap {
-    width: 92%;
-    height: 92%;
+    width: 100%;
+    min-height: clamp(320px, 45svh, 500px);
     background: #ecfff5;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 4px solid #110d0a;
-    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-    border-radius: 13px;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    overflow: hidden;
 }
 
 #map {
-    height: 90%;
-    width: 94%;
-    border-radius: 13px;
-    border: 1px solid #110d0a;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+
+/* ============================ RESPONSIVE ============================
+   Desktop is deliberately untouched. Below the nav's breakpoint the
+   map stops being a full-viewport panel — a 92%-of-100vh map is far
+   taller than it needs to be on a phone — and becomes a fixed-height
+   card with the page growing to fit it.                             */
+
+@media (max-width: 900px) {
+
+    .bg {
+        height: auto !important;
+        padding: 24px 16px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* back to a rounded card down here - full bleed only suits the desktop */
+    .bgmap {
+        width: 100%;
+        height: clamp(320px, 55vh, 520px);
+        border: 4px solid #110d0a;
+        border-radius: 13px;
+        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    #map {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .bg {
+        padding: 20px 14px;
+    }
+
+    .bgmap {
+        height: clamp(300px, 50vh, 440px);
+    }
+}
+
+@media (max-width: 480px) {
+
+    .bg {
+        padding: 16px 12px;
+    }
+
+    .bgmap {
+        height: clamp(260px, 46vh, 400px);
+        border-width: 3px;
+        box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    #map {
+        width: 100%;
+        height: 100%;
+    }
 }

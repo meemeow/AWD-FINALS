@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login/Signup</title>
+    <title>Meemeow&rsquo;s GitCafe</title>
     <link rel="stylesheet" type="text/css" href="assets/css/layout.css">
     <link rel="stylesheet" type="text/css" href="assets/css/login-signup.css">
-    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="assets/images/favicon.png">
 </head>
 <body>
 
@@ -21,83 +21,191 @@
             <span class="navToggleBar"></span>
         </button>
         <ul id="navMenu">
-            <li><a href="login-signup.html">Login / Signup</a></li>
+            <li class="navCta"><a href="login-signup.html">
+                <!-- lucide: log-in -->
+                <svg class="navCtaIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" x2="3" y1="12" y2="12"/></svg>
+                Login
+            </a></li>
             <li><a href="contacts.html">Contact Us</a></li>
-            <li><a href="track-my-order.html">Track your Order</a></li>   
+            <li><a href="track-my-order.html">Track your Order</a></li>
             <li><a href="order.html">Order</a></li>
             <li><a href="index.html">Home</a></li>
         </ul>
     </nav>
 
-    
+
     <div class="bg">
-        <div class="container">
-            <div class="button-container">
-                <button id="login-button" class="login-button">LogIn</button>
-                <button id="signup-button" class="signup-button">SignUp</button>
+        <div class="pageLayout">
+
+            <!-- title sign -->
+            <div class="title">
+                <img src="assets/images/logo.png" alt="">
+                <h1>Your Account</h1>
             </div>
-             <div class="login-form" id="login-form">
-                <form action="index.html" method="post">
-                    <input type="text" name="username" placeholder="Enter email or username" required>
-                    <input type="password" name="password" placeholder="Enter password" required>
-                    <button class="loginSubmit" type="submit">Login</button>
-                </form>
-                <a href="#">
-                    <p>Forgotten Account?</p>
-                </a>
-                <div class="signin-link">
-                    <a href="https://www.google.com">
-                        <button class="btn">
-                            <img src="https://cdn.iconscout.com/icon/free/png-256/free-google-1772223-1507807.png" alt="Google Icon">
-                            Sign In With Google
-                        </button>
-                    </a>
-                    <a href="https://www.yahoo.com">
-                        <button class="btn">
-                            <img src="https://cdn1.iconfinder.com/data/icons/smallicons-logotypes/32/yahoo-512.png" alt="Linkedin Icon">
-                            Sign In With Yahoo!
-                        </button>
-                    </a>
-                    <a href="https://www.microsoft.com">
-                        <button class="btn">
-                            <img src="https://www.microsoft.com/en-us/microsoft-365/blog/wp-content/uploads/sites/2/2022/06/cropped-microsoft_logo_element.png" alt="Microsoft Icon">
-                            Sign In With Microsoft
-                        </button>
-                    </a>
+
+            <div class="board">
+                <div class="panels">
+                    <section class="panel container">
+
+                        <div class="panelHead">
+                            <!-- lucide: user-round -->
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+                            <h1>Welcome to Meemeow's GitCafe</h1>
+                        </div>
+
+                        <!-- tabs -->
+                        <div class="button-container">
+                            <button id="login-button" class="login-button" type="button">
+                                <!-- lucide: log-in -->
+                                <svg class="icon iconSm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" x2="3" y1="12" y2="12"/></svg>
+                                Login
+                            </button>
+                            <button id="signup-button" class="signup-button" type="button">
+                                <!-- lucide: user-plus -->
+                                <svg class="icon iconSm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/></svg>
+                                Sign Up
+                            </button>
+                        </div>
+
+                        <!-- log in -->
+                        <div class="login-form" id="login-form">
+                            <form action="index.html" method="post">
+                                <div class="field">
+                                    <label for="loginUser">
+                                        <!-- lucide: at-sign -->
+                                        <svg class="icon iconSm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8"/></svg>
+                                        Email or username
+                                    </label>
+                                    <input type="text" id="loginUser" name="username" placeholder="Enter email or username" required>
+                                </div>
+                                <div class="field">
+                                    <label for="loginPass">
+                                        <!-- lucide: lock -->
+                                        <svg class="icon iconSm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                                        Password
+                                    </label>
+                                    <input type="password" id="loginPass" name="password" placeholder="Enter password" required>
+                                </div>
+
+                                <button class="loginSubmit primaryButton" type="submit">
+                                    <!-- lucide: log-in -->
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" x2="3" y1="12" y2="12"/></svg>
+                                    Login
+                                </button>
+                            </form>
+
+                            <a class="forgotLink" href="#">Forgotten account?</a>
+
+                            <div class="orRule"><span>or continue with</span></div>
+
+                            <div class="signin-link">
+                                <a href="https://www.google.com">
+                                    <button class="btn" type="button">
+                                        <img src="https://cdn.iconscout.com/icon/free/png-256/free-google-1772223-1507807.png" alt="">
+                                        Google
+                                    </button>
+                                </a>
+                                <a href="https://www.yahoo.com">
+                                    <button class="btn" type="button">
+                                        <img src="https://cdn1.iconfinder.com/data/icons/smallicons-logotypes/32/yahoo-512.png" alt="">
+                                        Yahoo!
+                                    </button>
+                                </a>
+                                <a href="https://www.microsoft.com">
+                                    <button class="btn" type="button">
+                                        <img src="https://www.microsoft.com/en-us/microsoft-365/blog/wp-content/uploads/sites/2/2022/06/cropped-microsoft_logo_element.png" alt="">
+                                        Microsoft
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- sign up -->
+                        <div class="signup-form" id="signup-form">
+                            <div class="signupBanner">
+                                <!-- lucide: sparkle -->
+                                <svg class="icon iconSm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+                                <h2>Please fill in this form to create an account!</h2>
+                            </div>
+
+                            <form action="index.html">
+                                <div class="fieldRow">
+                                    <div class="field">
+                                        <label for="first-name">
+                                            <!-- lucide: user -->
+                                            <svg class="icon iconSm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                            First name
+                                        </label>
+                                        <input id="first-name" type="text" name="firstName" placeholder="First Name" required>
+                                    </div>
+                                    <div class="field">
+                                        <label for="last-name">
+                                            <!-- lucide: user -->
+                                            <svg class="icon iconSm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                            Last name
+                                        </label>
+                                        <input id="last-name" type="text" name="lastName" placeholder="Last Name" required>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <label for="email">
+                                        <!-- lucide: mail -->
+                                        <svg class="icon iconSm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                        Email
+                                    </label>
+                                    <input id="email" type="text" name="username" placeholder="Email" required>
+                                </div>
+
+                                <div class="fieldRow">
+                                    <div class="field">
+                                        <label for="password">
+                                            <!-- lucide: lock -->
+                                            <svg class="icon iconSm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                                            Password
+                                        </label>
+                                        <input id="password" type="password" name="password" placeholder="Password" required>
+                                    </div>
+                                    <div class="field">
+                                        <label for="password2">
+                                            <!-- lucide: lock-keyhole -->
+                                            <svg class="icon iconSm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="16" r="1"/><rect width="18" height="12" x="3" y="10" rx="2"/><path d="M7 10V7a5 5 0 0 1 10 0v3"/></svg>
+                                            Confirm password
+                                        </label>
+                                        <input id="password2" type="password" name="password2" placeholder="Confirm password" required>
+                                    </div>
+                                </div>
+
+                                <div class="checkboxTerms">
+                                    <input type="checkbox" id="terms" name="terms" required>
+                                    <label for="terms">I accept the <a href="#terms-of-use">Terms of Use</a> &amp; <a href="#privacy-policy">Privacy Policy</a></label>
+                                </div>
+
+                                <button class="signupSubmit primaryButton" type="submit">
+                                    <!-- lucide: user-plus -->
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/></svg>
+                                    Create account
+                                </button>
+                            </form>
+                        </div>
+
+                    </section>
                 </div>
-            </div> 
-            <div class="signup-form" id="signup-form">
-                <div class="signupBanner">
-                    <h2>Please fill in this form to create an account!</h2>
-                </div>
-                <form id="signup-form" action="index.html">
-                    <input id="first-name" type="text" name="firstName" placeholder="First Name" required>
-                    <input id="last-name" type="text" name="lastName" placeholder="Last Name" required>
-                    <input id="email" type="text" name="username" placeholder="Email" required>
-                    <input id="password" type="password" name="password" placeholder="Password" required>
-                    <input id="password2" type="password" name="password2" placeholder="Confirm password" required>
-                    <div class="checkboxTerms">
-                    <input type="checkbox" id="terms" name="terms" required>
-                    <label for="terms">I accept the <a href="#terms-of-use">Terms of Use</a> & <a href="#privacy-policy">Privacy Policy</a></label>
-                    </div>
-                    <button class="signupSubmit" type="submit">Sign Up</button>
-                </form>
             </div>
-            
         </div>
     </div>
 
+    <!-- footer -->
     <div class="footer">
         <div class="hotline">
             <h1>Delivery Hotline</h1>
             <p>1-800-123-4567</p>
-        </div> 
+        </div>
         <div class="footerContent">
             <p>© 2024 Meemeow's GitCafe</p>
             <p>This site is created for educational purpose only!!</p>
         </div>
         <div class="terms">
-            <h1>Terms and Conditions</h1>
             <p>Privacy Policy</p>
             <p>Terms of Use</p>
             <p>Refund Policy</p>

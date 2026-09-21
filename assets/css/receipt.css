@@ -9,344 +9,231 @@
     box-sizing: border-box;
 }
 
-.bg {
-    width: 100%;
-    height: 100vh !important;
-    background-image: url('https://cdn.wallpapersafari.com/7/32/ZvhbSK.gif');
-    background-size: 100% 100%; 
-    background-repeat: no-repeat;
-    position: relative;
+
+/* ============================== PAGE ==============================
+   The receipt used to be a fixed 30% x 70% card with every line
+   absolutely positioned at hard pixel offsets, so it collided with
+   itself the moment the card changed size. It is normal flow now:
+   the card grows with its contents and the page grows with the card,
+   which is what keeps it clear of the nav and the footer at any zoom
+   level or screen size.                                             */
+
+body {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
 }
 
+.bg {
+    flex: 1 1 auto;
+    width: 100%;
+    min-height: calc(100vh - 84px);
+    min-height: calc(100svh - 84px);
+    background-image: url('https://cdn.wallpapersafari.com/7/32/ZvhbSK.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(18px, 2.5vw, 28px);
+    padding: clamp(24px, 4vw, 48px) clamp(14px, 3vw, 32px);
+}
+
+
+/* ============================= RECEIPT ============================= */
 
 .receipt {
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    top: 7%;
-    left: 35.8%;
-    z-index: 2;
-    width: 30%;
-    height: 70%;
+    width: 100%;
+    max-width: 420px;
     background-color: #ecfff5;
     border-radius: 13px;
-    padding: 20px;
+    padding: clamp(18px, 3vw, 26px);
     border: 4px solid #110d0a;
-    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
     font-family: "Rubik", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 20px;
     font-style: normal;
-    font-size: 20px;
+    color: #110d0a;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(14px, 2.2vw, 20px);
 }
 
-.returnButton {
-    position: absolute;
-    top: 82%;
-    left: 44.4%;
-    width: 13.4%;
-    height: 7%;
-    border-radius: 13px;
-    padding: 10px 15px;
-    background-color: white;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 4px solid #110d0a;
-    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-    font-family: "Rubik Mono One", monospace;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 20px;
+.receiptHeader h1 {
+    font-size: clamp(1.05rem, 3.4vw, 1.45rem);
+    line-height: 1.25;
     text-align: center;
 }
 
+
+/* ---------- itemised lines ----------
+   Three columns shared by the header and every line, so the amounts
+   line up on their own edge instead of being nudged with &nbsp;.    */
+
+.receiptCols,
+.receiptLine {
+    display: grid;
+    grid-template-columns: 2.6rem minmax(0, 1fr) auto;
+    gap: 6px;
+    align-items: baseline;
+}
+
+.receiptCols {
+    font-size: clamp(0.82rem, 2.4vw, 0.95rem);
+    font-weight: 600;
+    padding-bottom: 6px;
+    margin-bottom: 4px;
+    border-bottom: 2px solid rgba(17, 13, 10, 0.25);
+}
+
+.receiptCols span:last-child,
+.receiptLine .rAmt {
+    text-align: right;
+}
+
+.receiptLine {
+    font-size: clamp(0.8rem, 2.3vw, 0.92rem);
+    padding: 3px 0;
+}
+
+.receiptLine .rName {
+    overflow-wrap: anywhere;
+}
+
+
+/* ---------- totals and customer details ---------- */
+
+.receiptRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    font-size: clamp(0.82rem, 2.4vw, 0.95rem);
+    padding: 3px 0;
+}
+
+.receiptRow span:first-child {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* long addresses wrap instead of running out of the card */
+.receiptRow span:last-child {
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+/* replaces the row of "-----" characters, which overflowed */
+.receiptRule {
+    border-top: 2px dashed rgba(17, 13, 10, 0.45);
+    margin: 6px 0;
+}
+
+.receiptTotal,
+.receiptDetails {
+    display: flex;
+    flex-direction: column;
+}
+
+#deets {
+    font-size: clamp(0.95rem, 2.8vw, 1.1rem);
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+
+/* ---------- receipt footer ---------- */
+
+.receiptFooter {
+    text-align: center;
+    border-top: 2px dashed rgba(17, 13, 10, 0.45);
+    padding-top: 14px;
+}
+
+.receiptFooter h2 {
+    font-size: clamp(0.9rem, 2.6vw, 1.05rem);
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.receiptFooter h3 {
+    font-size: clamp(0.82rem, 2.4vw, 0.95rem);
+    margin-top: 8px;
+}
+
+.receiptFooter p {
+    font-size: clamp(0.75rem, 2.2vw, 0.85rem);
+}
+
+#credits {
+    font-size: clamp(0.82rem, 2.4vw, 0.95rem);
+    margin-top: 13px;
+}
+
+
+/* ============================= BUTTON ============================= */
+
+.returnButton {
+    border-radius: 13px;
+    padding: clamp(11px, 1.6vw, 15px) clamp(20px, 3vw, 30px);
+    background-color: white;
+    border: 4px solid #110d0a;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(0.85rem, 2vw, 1.1rem);
+    text-align: center;
+    color: #110d0a;
+    cursor: pointer;
+    transition: ease 0.1s;
+}
+
 .returnButton:hover {
-    background-color: #0a220a; 
+    background-color: #0a220a;
     color: white;
     transform: scale(1.06);
 }
 
-.returnButton:active{
-    background-color: #193819; 
+.returnButton:active {
+    background-color: #193819;
     color: white;
     transform: scale(0.96);
 }
 
-
-.receiptHeader {
-    position: absolute;
-    top: 35px;
-    left: 16.9%;
-}
-
-.receiptHeader h1{
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 20px;
-    font-style: normal;
-    font-size: 27px;
-    color: #110d0a;
-    text-align: center;
-    margin-bottom: 5px;
-}
-
-.receiptBody {
-    position: absolute;
-    top: 100px;
-    left: 34%;
-}
-
-.receiptBody h2 {
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 20px;
-    font-style: normal;
-    font-size: 18px;
-    color: #110d0a;
-    text-align: center;
-    margin-bottom: 5px;
-}
-
-.receiptBody h3 {
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 20px;
-    font-style: normal;
-    font-size: 17px;
-    color: #110d0a;
-    text-align: center;
-    margin-top: 5px;
-}
-
-.receiptBody p {
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 20px;
-    font-style: normal;
-    font-size: 15px;
-    color: #110d0a;
-    text-align: left;
-}
-
-.left {
-    float: left;
-}
-
-.right {
-    float: right;
-}
-
-#quantity {
-    position: absolute;
-    left: 0;
-    top: -30px;
-}
-
-#type {
-    position: absolute;
-    left: 50px;
-    top: -30px;
-}
-
-#amount {
-    position: absolute;
-    left: 125px;
-    top: -30px;
+.returnButton:focus-visible {
+    outline: 3px solid #ecfff5;
+    outline-offset: 3px;
 }
 
 
-#total1 {
-    position: absolute;
-    left: 0;
-    top: 10px;
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 20px;
-    font-style: normal;
-    font-size: 17px;
-    color: #110d0a;
-    text-align: center;
-    margin-top: 5px;
+/* =========================== RESPONSIVE =========================== */
+
+/* the nav bar gets shorter at these widths, so the page grows to match */
+
+@media (max-width: 900px) {
+
+    .bg {
+        min-height: calc(100vh - 76px);
+        min-height: calc(100svh - 76px);
+    }
 }
 
-#cash1 {
-    position: absolute;
-    left: 0;
-    top: 30px;
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 20px;
-    font-style: normal;
-    font-size: 17px;
-    color: #110d0a;
-    text-align: center;
-    margin-top: 5px;
-}
+@media (max-width: 480px) {
 
-#change1 {
-    position: absolute;
-    left: 0;
-    top: 62px;
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 20px;
-    font-style: normal;
-    font-size: 17px;
-    color: #110d0a;
-    text-align: center;
-    margin-top: 5px;
-}
+    .bg {
+        min-height: calc(100vh - 68px);
+        min-height: calc(100svh - 68px);
+        padding: 22px 12px;
+    }
 
+    .receipt {
+        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.75);
+    }
 
-.receiptTotal {
-    position: absolute;
-    top: 170px;
-    left: 34%;
-}
-
-.receiptTotal p {
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 20px;
-    font-style: normal;
-    font-size: 15px;
-    color: #110d0a;
-    text-align: right;
-}
-
-.receiptDetails {
-    position: absolute;
-    top: 273px;
-    left: 24%;
-}
-
-.receiptDetails h2 {
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 20px;
-    font-style: normal;
-    font-size: 20px;
-    color: #110d0a;
-    text-align: center;
-    margin-bottom: 5px;
-}
-
-.receiptDetails h3 {
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 20px;
-    font-style: normal;
-    font-size: 17px;
-    color: #110d0a;
-    text-align: center;
-    margin-top: 5px;
-}
-
-.receiptDetails p {
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 20px;
-    font-style: normal;
-    font-size: 15px;
-    color: #110d0a;
-    text-align: right;
-    margin-top: 13.4px;
-    position: absolute;
-    left: 110px;
-    width: 200px;
-}
-
-#deets{
-    position: absolute;
-    left: 62px;
-    top: 0;
-    align-items: center;
-    justify-content: center;
-    width: 190px;
-}
-
-
-#name2{
-    position: absolute;
-    top: 26px;
-}
-
-#phone2 {
-    position: absolute;
-    top: 55px;
-}
-
-#address2 {
-    position: absolute;
-    top: 85px;
-}
-
-#name1 {
-    position: absolute;
-    left: 0;
-    top: 33px;
-}
-
-#phone1 {
-    position: absolute;
-    left: 0;
-    top: 63px;
-}
-
-#address1 {
-    position: absolute;
-    left: 0;
-    top: 93px;
-}
-
-
-.receiptFooter {
-    position: absolute;
-    bottom: 30px;
-    left: 18.5%;
-}
-
-.receiptFooter h2 {
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 20px;
-    font-style: normal;
-    font-size: 19px;
-    color: #110d0a;
-    text-align: center;
-    margin-bottom: 5px;
-}
-
-.receiptFooter h3 {
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 20px;
-    font-style: normal;
-    font-size: 17px;
-    color: #110d0a;
-    text-align: center;
-    margin-top: 5px;
-}
-
-.receiptFooter p {
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 20px;
-    font-style: normal;
-    font-size: 14px;
-    color: #110d0a;
-    text-align: center;
-}
-
-#credits {
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 20px;
-    font-style: normal;
-    font-size: 17px;
-    color: #110d0a;
-    text-align: center;
-    margin-top: 13px;
+    .returnButton {
+        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.75);
+    }
 }

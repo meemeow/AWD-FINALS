@@ -9,206 +9,233 @@
     box-sizing: border-box;
 }
 
+:root {
+    --cream: #f6edd9;
+    --ink: #110d0a;
+    --leafLight: #5fd35f;
+    --leafDark: #17877a;
+    --leafRib: #0e6157;
+    --leafEdge: #0a3d38;
+    --green: #2a7d3c;
+    --greenDark: #1b5c2a;
+    --greenLight: #35914d;
+    --greenEdge: #14522a;
+    --greenEdgeDeep: #08240f;
+}
+
+body {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+}
+
 .bg {
+    flex: 1 1 auto;
     width: 100%;
-    height: 100vh !important;
+    min-height: max(520px, calc(100svh - 210px));
     background-image: url('https://cdn.wallpapersafari.com/7/32/ZvhbSK.gif');
-    background-size: 100% 100%; 
+    background-size: 100% 100%;
     background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(18px, 2vw, 32px) clamp(16px, 2.5vw, 40px);
+    /* the hero pool is wider than the hero itself, so keep it from pushing
+       the page sideways. clip rather than hidden, so the vertical axis is
+       left alone */
+    overflow-x: clip;
+}
+
+
+/* --------------------------- HERO --------------------------- */
+
+.hero {
+    position: relative;
+    width: min(100%, 1180px);
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(10px, 1.1vw, 21px);
+    padding: clamp(14px, 1.5vw, 28px) clamp(16px, 1.9vw, 36px);
+    text-align: center;
+}
+
+/* a soft pool behind the hero so the text reads against the busy art. it is a
+   radial gradient rather than a fill plus box-shadow, because a solid box never
+   quite meets a blurred shadow and the seam shows up as a visible rectangle */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: -18% -10%;
+    background-image: radial-gradient(ellipse farthest-side at center,
+                rgba(6, 11, 6, 0.82) 0%,
+                rgba(6, 11, 6, 0.76) 38%,
+                rgba(6, 11, 6, 0.45) 66%,
+                rgba(6, 11, 6, 0.12) 86%,
+                rgba(6, 11, 6, 0) 100%);
+    pointer-events: none;
+}
+
+/* the pseudo element is positioned, so the content needs to be too in order
+   to paint on top of it */
+.hero > * {
     position: relative;
 }
 
-
-.hOne {
-    position: absolute;
-    top: 21.5%;
-    left: 14.8%;
-    color: white;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hOne h1{
+/* the small capped line above the headline */
+.heroEyebrow {
     font-family: "Rubik Mono One", monospace;
     font-weight: 400;
-    font-style: normal;
-    font-size: 22px;
-    text-align: center;
-    font-size: 87px;
-    -webkit-text-stroke: 3px black;
-    border-radius: 13px;
-    box-shadow: 0px 7px 7px rgba(0,0,0,0.75),
-                0px -1px 7px rgba(0,0,0,0.75);
+    font-size: clamp(8px, 0.82vw, 15px);
+    letter-spacing: clamp(2px, 0.34vw, 6px);
+    text-transform: uppercase;
+    color: var(--cream);
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.8);
 }
 
 
-.hover-effect {
+/* ------------------------- HEADLINE ------------------------- */
+
+.heroTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(7px, 1.05vw, 20px);
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-size: clamp(25px, 5vw, 92px);
+    line-height: 1.05;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: #ffffff;
+    -webkit-text-stroke: clamp(1px, 0.17vw, 3px) var(--ink);
+    text-shadow: 0 clamp(3px, 0.32vw, 6px) 0 rgba(0, 0, 0, 0.55);
+}
+
+.heroWord {
     display: inline-block;
-    transition: all 0.5s ease;
+    transition: transform 0.2s ease, color 0.2s ease;
     cursor: context-menu;
-    box-sizing: border-box;
-    padding: 15px 30px;
-    border: 5px solid transparent;
 }
 
-.hover-effect:hover {
-    border-radius: 13px;
-    border: 5px solid #110d0a;
-    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-    transform: scale(1.04);
-    background-color: #0a220a;
-    color: white;
-    margin-right: 20px;
+.heroWord:hover {
+    transform: translateY(-4px);
+    color: #d9f0de;
 }
 
-.hover-effect::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 5px;
-    bottom: 15px;
-    left: 20px;
-    border-radius: 10px;
-    border: 3px solid #110d0a;
-    background-color: #ffffff;
-    visibility: hidden;
-    transition: all 0.4s ease;
+/* the pixel leaves between the words - upright and front on, drawn on a
+   16x16 grid so the edges stay stepped at any size */
+.heroLeaf {
+    width: clamp(14px, 2.7vw, 50px);
+    height: clamp(14px, 2.7vw, 50px);
+    flex: none;
+    filter: drop-shadow(clamp(1px, 0.11vw, 2px) 0 0 var(--leafEdge))
+            drop-shadow(clamp(-1px, -0.11vw, -2px) 0 0 var(--leafEdge))
+            drop-shadow(0 clamp(1px, 0.11vw, 2px) 0 var(--leafEdge))
+            drop-shadow(0 clamp(-1px, -0.11vw, -2px) 0 var(--leafEdge))
+            drop-shadow(0 clamp(2px, 0.25vw, 5px) 0 rgba(0, 0, 0, 0.5));
 }
 
-.hover-effect:hover::before {
-    visibility: visible;
-    width: 92%;
+.leafLight {
+    fill: var(--leafLight);
 }
 
-.hover-effect1 {
-    display: inline-block;
-    transition: all 0.5s ease;
-    cursor: context-menu;
-    box-sizing: border-box;
-    padding: 15px 30px;
-    border: 5px solid transparent;
+.leafDark {
+    fill: var(--leafDark);
 }
 
-.hover-effect1:hover {
-    border-radius: 13px;
-    border: 5px solid #110d0a;
-    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-    transform: scale(1.04);
-    background-color: white;
-    color: #193819;
-    margin-right: 20px;
-}
-
-.hover-effect1::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 5px;
-    bottom: 15px;
-    left: 20px;
-    border-radius: 10px;
-    border: 3px solid #110d0a;
-    background-color: #193819;
-    visibility: hidden;
-    transition: all 0.4s ease;
-}
-
-.hover-effect1:hover::before {
-    visibility: visible;
-    width: 92%;
+.leafRib {
+    fill: var(--leafRib);
 }
 
 
-.hTwo {
-    position: absolute;
-    top: 10%;
-    left: 3.9%;
-    color: white;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hTwo h2{
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700px;
-    font-style: normal;
-    font-size: 32px;
-    color: #0a220a;
-}
-
-.para {
-    position: absolute;
-    top: 55%;
-    left: 16%;
-    color: white;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.para p{
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400px;
-    font-style: normal;
-    font-size: 22px;
-    color: #0a220a;
-}
-
-.bord {
-    position: absolute;
-    left: 30.5%;
-    top: 40.5%;
-    width: 39.5%;
-    height: 10%;
-    border-radius: 13px;
-    padding: 10px 20px;
-    background-color: white;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 4px solid #110d0a;
-    box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.75);
-}
-
+/* -------------------------- BUTTON -------------------------- */
 
 .coffee-button {
-    position: absolute;
-    left: 43%;
-    top: 56%;
-    width: auto;
-    height: auto;
-    border-radius: 13px;
-    padding: 13px 25px;
-    background-color: #0a220a;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
     align-items: center;
-    border: 4px solid #110d0a;
-    box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.75);
+    justify-content: center;
+    gap: clamp(7px, 0.62vw, 12px);
+    margin-top: clamp(8px, 1vw, 20px);
+    padding: clamp(7px, 0.5vw, 10px) clamp(19px, 1.85vw, 35px);
+    border: clamp(2px, 0.2vw, 3px) solid var(--greenEdgeDeep);
+    border-radius: 9px;
+    background-color: var(--green);
+    box-shadow: 0 clamp(4px, 0.28vw, 5px) 0 0 var(--greenEdgeDeep);
     font-family: "Rubik Mono One", monospace;
     font-weight: 400;
-    font-style: normal;
-    font-size: 22px;
+    font-size: clamp(11px, 1.02vw, 19px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
     text-align: center;
+    color: #ffffff;
     cursor: pointer;
-    transition: ease 0.1s;
-    color: white;
+    transition: background-color 0.12s ease, transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.coffee-button .icon {
+    width: clamp(13px, 1.2vw, 22px);
+    height: clamp(13px, 1.2vw, 22px);
+    flex: none;
+    color: #ffffff;
 }
 
 .coffee-button:hover {
-    transform: scale(1.03);
+    background-color: var(--greenLight);
+    transform: translateY(-1px);
+    box-shadow: 0 clamp(5px, 0.34vw, 6px) 0 0 var(--greenEdgeDeep);
 }
 
-.coffee-button:active{
-    background-color: #193819; 
-    transform: scale(0.98);
+.coffee-button:active {
+    background-color: var(--greenDark);
+    transform: translateY(5px);
+    box-shadow: 0 0 0 0 var(--greenEdgeDeep);
+}
+
+
+/* ------------------------ RESPONSIVE ------------------------ */
+
+@media (max-width: 1180px) {
+    .bg {
+        padding: clamp(22px, 3vw, 32px) clamp(16px, 3vw, 28px);
+    }
+
+    .heroTitle {
+        font-size: clamp(25px, 6vw, 72px);
+    }
+
+    .heroLeaf {
+        width: clamp(14px, 3.2vw, 40px);
+        height: clamp(14px, 3.2vw, 40px);
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        gap: 11px;
+        padding: 12px 10px;
+    }
+
+    .heroEyebrow {
+        /* the dashes crowd the line once it gets this narrow */
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .heroTitle {
+        font-size: clamp(19px, 6.4vw, 44px);
+        gap: 6px;
+    }
+
+    .heroLeaf {
+        width: clamp(12px, 3.9vw, 24px);
+        height: clamp(12px, 3.9vw, 24px);
+    }
+
+    .coffee-button {
+        padding: 10px 19px;
+        font-size: 11px;
+    }
 }

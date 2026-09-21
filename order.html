@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order</title>
+    <title>Meemeow&rsquo;s GitCafe</title>
     <link rel="stylesheet" type="text/css" href="assets/css/layout.css">
     <link rel="stylesheet" type="text/css" href="assets/css/order.css">
-    <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="assets/images/favicon.png">
 </head>
 <body>
 
@@ -21,7 +21,11 @@
             <span class="navToggleBar"></span>
         </button>
         <ul id="navMenu">
-            <li><a href="login-signup.html">Login / Signup</a></li>
+            <li class="navCta"><a href="login-signup.html">
+                <!-- lucide: log-in -->
+                <svg class="navCtaIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" x2="3" y1="12" y2="12"/></svg>
+                Login
+            </a></li>
             <li><a href="contacts.html">Contact Us</a></li>
             <li><a href="track-my-order.html">Track your Order</a></li>
             <li><a href="order.html">Order</a></li>
@@ -29,171 +33,201 @@
         </ul>
     </nav>
 
-    
+
     <div class="bg">
-        <!-- title -->
-        <div class="title">
-            <h1>Meemeow's GitCafe</h1>
+        <div class="orderLayout">
+
+            <!-- title sign -->
+            <div class="title">
+                <img src="assets/images/logo.png" alt="">
+                <h1>Meemeow's GitCafe</h1>
+            </div>
+
+            <div class="orderBoard">
+                <div class="panels">
+
+                    <!-- menu -->
+                    <section class="panel menu">
+                        <div class="panelHead menuTitle">
+                            <!-- lucide: diamond -->
+                            <svg class="icon iconSm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.7 10.3a2.41 2.41 0 0 0 0 3.41l7.59 7.59a2.41 2.41 0 0 0 3.41 0l7.59-7.59a2.41 2.41 0 0 0 0-3.41L13.7 2.71a2.41 2.41 0 0 0-3.41 0Z"/></svg>
+                            <h1>Menu</h1>
+                            <!-- lucide: diamond -->
+                            <svg class="icon iconSm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.7 10.3a2.41 2.41 0 0 0 0 3.41l7.59 7.59a2.41 2.41 0 0 0 3.41 0l7.59-7.59a2.41 2.41 0 0 0 0-3.41L13.7 2.71a2.41 2.41 0 0 0-3.41 0Z"/></svg>
+                            <!-- lucide: sparkle -->
+                            <svg class="icon iconSm panelSpark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+                        </div>
+
+                        <div class="fourbyfourMenu">
+                            <div class="box">
+                                <!-- lucide: star -->
+                                <svg class="icon boxStar" viewBox="0 0 24 24" fill="currentColor" stroke="#2b1d12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.11a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.895a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+                                <img src="assets/images/item1.png" alt="Latte">
+                                <div class="boxInfo">
+                                    <h3 class="productName">Latte</h3>
+                                    <p class="productPrice">$4.25</p>
+                                    <button class="menuButton addToCart" data-target="add1">+ Add</button>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <!-- lucide: star -->
+                                <svg class="icon boxStar" viewBox="0 0 24 24" fill="currentColor" stroke="#2b1d12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.11a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.895a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+                                <img src="assets/images/item2.png" alt="Espresso">
+                                <div class="boxInfo">
+                                    <h3 class="productName">Espresso</h3>
+                                    <p class="productPrice">$3.50</p>
+                                    <button class="menuButton addToCart" data-target="add2">+ Add</button>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <!-- lucide: star -->
+                                <svg class="icon boxStar" viewBox="0 0 24 24" fill="currentColor" stroke="#2b1d12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.11a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.895a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+                                <img src="assets/images/item3.png" alt="Frappe">
+                                <div class="boxInfo">
+                                    <h3 class="productName">Frappe</h3>
+                                    <p class="productPrice">$4.15</p>
+                                    <button class="menuButton addToCart" data-target="add3">+ Add</button>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <!-- lucide: star -->
+                                <svg class="icon boxStar" viewBox="0 0 24 24" fill="currentColor" stroke="#2b1d12" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.11a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.895a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+                                <img src="assets/images/item4.png" alt="Iced Coffee">
+                                <div class="boxInfo">
+                                    <h3 class="productName">Iced Coffee</h3>
+                                    <p class="productPrice">$3.75</p>
+                                    <button class="menuButton addToCart" data-target="add4">+ Add</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- order -->
+                    <section class="panel orderForm">
+                        <div class="panelHead orderTitle">
+                            <!-- lucide: shopping-cart -->
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                            <h1>Order</h1>
+                            <span class="qtyPill">(<span class="totalqty">0</span>)</span>
+                            <!-- lucide: chevron-down -->
+                            <svg class="icon headChevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                        </div>
+
+                        <div class="cartLines">
+                            <div class="cartRow">
+                                <img class="rowIcon" src="assets/images/item1.png" alt="">
+                                <span class="rowName">Latte</span>
+                                <div class="stepper">
+                                    <button class="minus" id="minus1" aria-label="Remove one Latte">&minus;</button>
+                                    <div class="quantityBox" id="quantity1">0</div>
+                                    <button class="add" id="add1" aria-label="Add one Latte">+</button>
+                                </div>
+                                <div class="priceBox" id="price1">$0.00</div>
+                            </div>
+
+                            <div class="cartRow">
+                                <img class="rowIcon" src="assets/images/item2.png" alt="">
+                                <span class="rowName">Espresso</span>
+                                <div class="stepper">
+                                    <button class="minus" id="minus2" aria-label="Remove one Espresso">&minus;</button>
+                                    <div class="quantityBox" id="quantity2">0</div>
+                                    <button class="add" id="add2" aria-label="Add one Espresso">+</button>
+                                </div>
+                                <div class="priceBox" id="price2">$0.00</div>
+                            </div>
+
+                            <div class="cartRow">
+                                <img class="rowIcon" src="assets/images/item3.png" alt="">
+                                <span class="rowName">Frappe</span>
+                                <div class="stepper">
+                                    <button class="minus" id="minus3" aria-label="Remove one Frappe">&minus;</button>
+                                    <div class="quantityBox" id="quantity3">0</div>
+                                    <button class="add" id="add3" aria-label="Add one Frappe">+</button>
+                                </div>
+                                <div class="priceBox" id="price3">$0.00</div>
+                            </div>
+
+                            <div class="cartRow">
+                                <img class="rowIcon" src="assets/images/item4.png" alt="">
+                                <span class="rowName">Iced Coffee</span>
+                                <div class="stepper">
+                                    <button class="minus" id="minus4" aria-label="Remove one Iced Coffee">&minus;</button>
+                                    <div class="quantityBox" id="quantity4">0</div>
+                                    <button class="add" id="add4" aria-label="Add one Iced Coffee">+</button>
+                                </div>
+                                <div class="priceBox" id="price4">$0.00</div>
+                            </div>
+                        </div>
+
+                        <div class="totalSum">
+                            <!-- lucide: circle-dollar-sign -->
+                            <svg class="icon coinIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg>
+                            <h1>Total :</h1>
+                            <div class="totalPrice">$0.00</div>
+                            <!-- lucide: sparkle -->
+                            <svg class="icon iconSm totalSpark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+                        </div>
+
+                        <div class="bill">
+                            <!-- lucide: circle-dot -->
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg>
+                            <h1>Cash:</h1>
+                            <input type="text" class="billInput" placeholder="Enter amount..." id="cashInput" disabled required>
+                        </div>
+
+                        <!-- carried through to the receipt; the panel itself shows the total and the cash -->
+                        <div class="srOnly">
+                            <div class="totalCash"><span class="cash">$0.00</span></div>
+                            <div class="totalChange"><span class="change">$0.00</span></div>
+                        </div>
+                    </section>
+
+                    <!-- info -->
+                    <section class="panel customerInfo">
+                        <div class="panelHead infoTitle">
+                            <!-- lucide: user -->
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                            <h1>Customers' Information</h1>
+                        </div>
+
+                        <div class="field name">
+                            <label for="nameInput">
+                                <!-- lucide: user -->
+                                <svg class="icon iconSm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                Name
+                            </label>
+                            <input type="text" id="nameInput" class="infoInput" placeholder="Enter Name" required>
+                        </div>
+                        <div class="field phone">
+                            <label for="phoneInput">
+                                <!-- lucide: phone -->
+                                <svg class="icon iconSm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                Phone
+                            </label>
+                            <input type="text" id="phoneInput" class="infoInput" placeholder="Enter Phone Number" required>
+                        </div>
+                        <div class="field address">
+                            <label for="addressInput">
+                                <!-- lucide: house -->
+                                <svg class="icon iconSm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                                Address
+                            </label>
+                            <input type="text" id="addressInput" class="infoInput" placeholder="Enter Address" required>
+                        </div>
+
+                        <button id="placeOrder" disabled>
+                            <!-- lucide: coffee -->
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v2"/><path d="M14 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/><path d="M6 2v2"/></svg>
+                            Place Order!
+                        </button>
+                    </section>
+
+                </div>
+            </div>
         </div>
-
-
-        <!-- menu -->
-        <div class="menu">
-            <div class="menuTitle">
-                <h1>Menu</h1>
-            </div>
-            <div class="fourbyfourMenu">
-                <div class="box">
-                    <div class="overlay">
-                        <h1 class="price">$4.25</h1>
-                    </div>
-                    <img src="assets/images/item1.png" alt="Image 1">
-                    <button class="menuButton" id="firstMenu" data-price="$4.25">Latte</button>
-                </div>
-                <div class="box">
-                    <div class="overlay">
-                        <h1 class="price">$3.50</h1>
-                    </div>
-                    <img src="assets/images/item2.png" alt="Image 2">
-                    <button class="menuButton" id="secondMenu" data-price="$3.50">Espresso</button>
-                </div>
-                <div class="box">
-                    <div class="overlay">
-                        <h1 class="price">$4.15</h1>
-                    </div>
-                    <img src="assets/images/item3.png" alt="Image 3">
-                    <button class="menuButton" id="thirdMenu" data-price="$4.00">Frappe</button>
-                </div>
-                <div class="box">
-                    <div class="overlay">
-                        <h1 class="price">$3.75</h1>
-                    </div>
-                    <img src="assets/images/item4.png" alt="Image 4">
-                    <button class="menuButton" id="fourthMenu" data-price="$3.00">Iced Coffee</button> 
-                </div>
-            </div>
-        </div>
-
-
-        <!-- order -->
-        <div class="orderForm">
-            <div class="orderTitle">
-                <h1>Order Form</h1>
-            </div>
-            <div class="itemQuantity">
-                <div class="box1">
-                    <h1>Latte</h1>
-                </div>
-                <div class="box2">
-                    <h1>Espresso</h1>
-                </div>
-                <div class="box3">
-                    <h1>Frappe</h1>
-                </div>
-                <div class="box4">
-                    <h1>Iced Coffee</h1>
-                </div>
-                <div class="quantity">
-                    <div class="addbutton">
-                        <button class="add" id="add1">+</button>
-                        <button class="add" id="add2">+</button>
-                        <button class="add" id="add3">+</button>
-                        <button class="add" id="add4">+</button>
-                    </div>
-                    <div class="minusbutton">
-                        <button class="minus" id="minus1">-</button>
-                        <button class="minus" id="minus2">-</button>
-                        <button class="minus" id="minus3">-</button>
-                        <button class="minus" id="minus4">-</button>
-                    </div>
-                </div>
-            </div>
-            <div class="titles">
-                <h1>Qty. Price Biocup?</h1>
-            </div>
-            <div class="quantityBoxes">
-                <div class="quantityBox" id="quantity1">0</div>
-                <div class="quantityBox" id="quantity2">0</div>
-                <div class="quantityBox" id="quantity3">0</div>
-                <div class="quantityBox" id="quantity4">0</div>
-            </div>
-            <div class="priceBoxes">
-                <div class="priceBox" id="price1">$0.00</div>
-                <div class="priceBox" id="price2">$0.00</div>
-                <div class="priceBox" id="price3">$0.00</div>
-                <div class="priceBox" id="price4">$0.00</div>
-            </div>
-            <div class="biocup">
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-            </div>
-            <div class="total">
-                <div class="bill">
-                    <h1>Cash:</h1>
-                    <input type="text" class="billInput" placeholder="Enter ($)" id="cashInput" disabled required>
-                </div>
-                <div class="totalP">
-                    <h1>Total:</h1>
-                    <div class="totalPrice">$0.00</div>
-                </div>
-            </div>
-            <div class="totalqty">0</div>
-        </div>
-
-
-        <!-- info -->
-        <div class="customerInfo">
-            <div class="infoTitle">
-                <h1>Customers' Information</h1>
-            </div>
-            <div class="name">
-                <h1>Name:</h1>
-                <input type="text" class="infoInput" placeholder="Enter Name" required>
-            </div>
-            <div class="phone">
-                <h1>Phone:</h1>
-                <input type="text" class="infoInput" id="phoneInput" placeholder="Enter Phone Number" required>
-            </div>
-            <div class="address">
-                <h1>Address:</h1>
-                <input type="text" class="infoInput" placeholder="Enter Address" required>
-            </div>
-        </div>
-
-        <!-- info -->
-        <div class="orderSummary">
-            <div class="totalSum">
-                <h1>Total:</h1>
-                <div class="totalPrice">$0.00</div>
-            </div>
-            <div class="totalCash">
-                <h1>Cash:</h1>
-                <div class="cash">$0.00</div>
-            </div>
-            <div class="divider">
-                <h2>--------------------------------------</h2>
-            </div>
-            <div class="totalChange">
-                <h1>Change:</h1>
-                <div class="change">$0.00</div>
-            </div>
-            <button id="placeOrder" disabled>Place Order!</button>
-        </div>
-
     </div>
 
     <!-- footer -->
@@ -201,13 +235,12 @@
         <div class="hotline">
             <h1>Delivery Hotline</h1>
             <p>1-800-123-4567</p>
-        </div> 
+        </div>
         <div class="footerContent">
             <p>© 2024 Meemeow's GitCafe</p>
             <p>This site is created for educational purpose only!!</p>
         </div>
         <div class="terms">
-            <h1>Terms and Conditions</h1>
             <p>Privacy Policy</p>
             <p>Terms of Use</p>
             <p>Refund Policy</p>

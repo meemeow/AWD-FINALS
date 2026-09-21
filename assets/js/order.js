@@ -88,22 +88,34 @@ function checkCashInput() {
 cashInput.addEventListener('input', checkCashInput);
 
 
-document.querySelectorAll('.menuButton').forEach(button => {
-    button.addEventListener('mouseover', () => {
-        const box = button.parentElement;
-        const overlay = box.querySelector('.overlay');
-        const price = overlay.querySelector('.price');
-        overlay.style.backgroundColor = 'rgba(255, 255, 255, 0.7)';
-        price.style.opacity = '1';
+// The "+ Add" button on a menu card just presses that item's + in the
+// order panel, so all the counting still runs through the steppers.
+document.querySelectorAll('.addToCart').forEach(button => {
+    button.addEventListener('click', () => {
+        const stepper = document.getElementById(button.dataset.target);
+        if (stepper) {
+            stepper.click();
+        }
     });
+});
 
-    button.addEventListener('mouseout', () => {
-        const box = button.parentElement;
-        const overlay = box.querySelector('.overlay');
-        const price = overlay.querySelector('.price');
-        overlay.style.backgroundColor = 'rgba(255, 255, 255, 0)';
-        price.style.opacity = '0';
+// Marks the cards and the rows that are actually in the order.
+function syncSelected() {
+    const cards = document.querySelectorAll('.fourbyfourMenu .box');
+    const rows = document.querySelectorAll('.cartRow');
+    quantityBoxes.forEach((box, index) => {
+        const inCart = (parseInt(box.textContent, 10) || 0) > 0;
+        if (cards[index]) {
+            cards[index].classList.toggle('isSelected', inCart);
+        }
+        if (rows[index]) {
+            rows[index].classList.toggle('isActive', inCart);
+        }
     });
+}
+
+document.querySelectorAll('.add, .minus').forEach(button => {
+    button.addEventListener('click', syncSelected);
 });
 
 window.onload = function() {
