@@ -38,7 +38,8 @@ body {
     width: 100%;
     min-height: max(520px, calc(100svh - 210px));
     background-image: url('https://cdn.wallpapersafari.com/7/32/ZvhbSK.gif');
-    background-size: 100% 100%;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
@@ -499,10 +500,42 @@ body {
         font-size: 12px;
     }
 
-    /* one field, one button per row once it gets narrow */
+    /* one field, one button per row once it gets narrow - the login /
+       sign up tabs stay side by side, they're short enough to share */
     .fieldRow,
-    .button-container,
     .signin-link {
         grid-template-columns: minmax(0, 1fr);
+    }
+
+    /* slimmer buttons - the desktop padding is too chunky on a phone */
+    .login-button,
+    .signup-button {
+        padding: 9px 8px;
+        font-size: 12px;
+    }
+
+    .primaryButton {
+        padding: 10px;
+        font-size: 13px;
+        box-shadow: 0 4px 0 0 var(--greenEdge);
+    }
+
+    .btn {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .btn img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .field input {
+        padding: 9px 11px;
     }
 }

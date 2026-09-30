@@ -204,7 +204,7 @@ nav.open .navToggleBar:nth-child(3) {
 /* --------------------------- FOOTER ---------------------------
    One line on desktop: each group lays its heading and lines out
    side by side so the whole bar is a single row. It stacks into
-   columns below 1180px, where one line no longer fits.          */
+   columns below 1320px, where one line no longer fits.          */
 
 .footer {
     width: 100%;
@@ -242,7 +242,7 @@ nav.open .navToggleBar:nth-child(3) {
 }
 
 .footer .hotline h1 {
-    font-size: clamp(12px, 0.8vw, 16px);
+    font-size: 16px;
     font-weight: 600;
     font-style: normal;
     color: #ecfff5;
@@ -252,7 +252,7 @@ nav.open .navToggleBar:nth-child(3) {
 .footer .hotline p,
 .footer .footerContent p,
 .footer .terms p {
-    font-size: clamp(11px, 0.72vw, 15px);
+    font-size: 16px;
     font-weight: 400;
     font-style: normal;
     color: #ecfff5;
@@ -270,7 +270,7 @@ nav.open .navToggleBar:nth-child(3) {
 /* =========================== RESPONSIVE =========================== */
 
 /* One line stops fitting here, so the groups go back to stacked columns. */
-@media (max-width: 1180px) {
+@media (max-width: 1320px) {
 
     .footer {
         flex-direction: column;
@@ -291,17 +291,11 @@ nav.open .navToggleBar:nth-child(3) {
     }
 
     .footer .hotline h1 {
-        font-size: 22px;
+        font-size: 18px;
         margin-bottom: 9px;
     }
 
-    .footer .hotline p,
-    .footer .footerContent p {
-        font-size: 16px;
-    }
-
     .footer .terms p {
-        font-size: 15px;
         margin-top: 8px;
     }
 
@@ -322,10 +316,14 @@ nav.open .navToggleBar:nth-child(3) {
         min-height: 76px;
     }
 
+    /* pinned to the top bar rather than centred on the nav, so it
+       doesn't slide down into the list when the menu opens */
     nav img {
         width: 54px;
         height: 54px;
         margin-left: 10px;
+        top: 11px;
+        transform: none;
     }
 
     .navToggle {
@@ -408,20 +406,26 @@ nav.open .navToggleBar:nth-child(3) {
         font-size: 16px;
     }
 
+    .navCta a {
+        padding: 9px 18px;
+        font-size: 13px;
+    }
+
+    .navCtaIcon {
+        width: 15px;
+        height: 15px;
+    }
+
     .footer {
         padding: 22px 16px;
     }
 
-    .footer .hotline h1,
-    .footer .terms h1 {
-        font-size: 22px;
-    }
-
-    .footer .hotline p,
-    .footer .footerContent p {
+    .footer .hotline h1 {
         font-size: 16px;
     }
 
+    .footer .hotline p,
+    .footer .footerContent p,
     .footer .terms p {
         font-size: 15px;
     }

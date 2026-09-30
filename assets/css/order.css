@@ -39,7 +39,8 @@ body {
     width: 100%;
     min-height: max(520px, calc(100svh - 210px));
     background-image: url('https://cdn.wallpapersafari.com/7/32/ZvhbSK.gif');
-    background-size: 100% 100%;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
@@ -662,5 +663,22 @@ body {
     .cartRow .priceBox {
         grid-column: 2 / -1;
         text-align: left;
+    }
+
+    /* slimmer buttons - the desktop padding is too chunky on a phone */
+    #placeOrder {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    #placeOrder .icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .infoInput,
+    .billInput {
+        padding-top: 8px;
+        padding-bottom: 8px;
     }
 }
